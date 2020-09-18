@@ -18,7 +18,7 @@
 
 ### 理想气体物态方程
 
-$1atm=1.013\times10^5Pa=760mmHg\\T=t+273.15$
+$1\,\mathrm{atm}=1.013\times10^5\,\mathrm{Pa}=760mmHg\\T=t+273.15$
 
 1. 波义耳定律(T)
    $p_1V_1=p_2V_2$
@@ -31,9 +31,9 @@ $1atm=1.013\times10^5Pa=760mmHg\\T=t+273.15$
 
 理想气体压强公式:$$\overline{v^2}=\frac{v_1^2+\ldots+V_n^2}{N}=\frac{1}{N}\sum_{i=1}^{N}{v_i^2}$$
 
-$pV=\frac{m}{M_mol}RT=\nu{}RT$
+$pV=\frac{m}{M_\mathrm{mol}}RT=\nu{}RT$
 
-> $m:气体质量(kg)\\M_mol:气体摩尔质量\\R:气体普适常量\\\nu:摩尔数$
+> $m:气体质量(kg)\\M_\mathrm{mol}:气体摩尔质量\\R:气体普适常量\\\nu:摩尔数$
 
 理想气体常数:
 
@@ -53,7 +53,7 @@ $p=nkT \\ p=\frac{2}{3}n \overline{\varepsilon_k}\\\overline{\varepsilon_k}=\fra
 
 ### 内能
 
-$$E=N_A \overline \varepsilon=N_A \frac {i}{2}kT\Rrightarrow E=\frac{i}{2}RT$$
+$$E=N_A \overline \varepsilon=N_A \frac {i}{2}kT\implies E=\frac{i}{2}RT$$
 
 ### 麦克斯韦速率分布律
 
@@ -64,7 +64,7 @@ $$E=N_A \overline \varepsilon=N_A \frac {i}{2}kT\Rrightarrow E=\frac{i}{2}RT$$
 
 $$f(v)=\frac{1}{N}\frac{dN}{dv}$$
 
-$$f(v)=4\pi (\frac{m_0}{2\pi kT})^{3/2}e^{-m_0v^2/2kT}v^2$$
+$$f(v)=4\pi \left(\frac{m_0}{2\pi kT}\right)^{3/2}e^{-m_0v^2/2kT}v^2$$
 
 ### 三种统计速率
 
@@ -87,7 +87,7 @@ $\hspace{3ex} \int^{0}_{\infty}{f(v)dv}=1\\dS=f(v)dv=\frac{dN}{N}$
 
 平均自由程:**每两次**碰撞之间，一个分子自由运动的**平均路程**
 
-$$\overline{\lambda}=\frac{kT}{\sqrt{2}\pi{}d^2p}~~~\overline{\lambda{}}\propto\frac{1}{p},T~~~d=10^{-10}m$$
+$$\overline{\lambda}=\frac{kT}{\sqrt{2}\pi{}d^2p}\qquad\overline{\lambda{}}\propto\frac{1}{p},T\qquad d=10^{-10}m$$
 
 ## 热力学
 
@@ -134,7 +134,7 @@ $$C_V=\frac{i}{2}R$$
 
 1. 等容过程
 
-   $$\nu{}=\frac{m}{M_{mol}}$$
+   $$\nu{}=\frac{m}{M_\mathrm{mol}}$$
 
    $$Q_V=E_2-E_1=\nu{}\frac{i}{2}R(T_2-T_1)$$
 
@@ -172,9 +172,9 @@ $$\Delta{W}=-\frac{m}{\mu}C_V(T_2-T_1)$$
 
 $$
 \begin{aligned}
-   V^{\gamma{}-1}T=const\\
-   pV^{\gamma}=const\\
-   p^{\gamma{}-1}T^{-\gamma}=const
+   V^{\gamma{}-1}T=\mathit{const}\\
+   pV^{\gamma}=\mathit{const}\\
+   p^{\gamma{}-1}T^{-\gamma}=\mathit{const}
 \end{aligned}
 $$
 
