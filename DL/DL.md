@@ -83,9 +83,9 @@
 $$
 F\left\{
    \begin{aligned}
-      1\Longleftrightarrow 0 \\
-      +\Longleftrightarrow \bullet \\
-      A \Longleftrightarrow \overline A
+      1&\Longleftrightarrow 0 \\
+      +&\Longleftrightarrow \bullet \\
+      A&\Longleftrightarrow \overline A
    \end{aligned}
 \right\}\overline F
 $$
@@ -95,8 +95,8 @@ $$
 $$
 F\left\{
    \begin{aligned}
-      1\Longleftrightarrow 0 \\
-      +\Longleftrightarrow \bullet
+      1&\Longleftrightarrow 0 \\
+      +&\Longleftrightarrow \bullet
    \end{aligned}
 \right\} F'
 $$
@@ -151,10 +151,10 @@ $$
 
    | $_{AB}\\^{CD}$ | 00                           | 01                           | 11                | 10                           |
    | -------------: | :--------------------------- | :--------------------------- | :---------------- | :--------------------------- |
-   |             00 | $\overline{ABCD}$            | $\overline{A}B\overline{CD}$ | $AB\overline{CD}$ | $A\overline{BCD}$            |
-   |             01 | $\overline{ABC}D$            | $\overline{A}B\overline{C}D$ | $AB\overline{C}D$ | $A\overline{BC}D$            |
-   |             11 | $\overline{AB}CD$            | $\overline{A}BCD$            | $ABCD$            | $A\overline{B}CD$            |
-   |             10 | $\overline{AB}C\overline{D}$ | $\overline{A}BC\overline{D}$ | $ABC\overline{D}$ | $A\overline{B}C\overline{D}$ |
+   |             00 | $\overline{A}\,\overline{B}\,\overline{C}\,\overline{D}$            | $\overline{A}B\overline{C}\,\overline{D}$ | $AB\overline{C}\,\overline{D}$ | $A\overline{B}\,\overline{C}\,\overline{D}$            |
+   |             01 | $\overline{A}\,\overline{B}\,\overline{C}D$            | $\overline{A}B\overline{C}D$ | $AB\overline{C}D$ | $A\overline{B}\,\overline{C}D$            |
+   |             11 | $\overline{A}\,\overline{B}CD$            | $\overline{A}BCD$            | $ABCD$            | $A\overline{B}CD$            |
+   |             10 | $\overline{A}\,\overline{B}C\overline{D}$ | $\overline{A}BC\overline{D}$ | $ABC\overline{D}$ | $A\overline{B}C\overline{D}$ |
 
 - $~AB+A\overline{B}=A$
 - $\overline{A}B\overline{C}+\overline{A}BC+AB\overline{C}+ABC=B\overline{C}+BC=B$
@@ -169,19 +169,19 @@ $$
 
 1. 与门
 
-   符号：$^A_B{\large=}\boxed{\&}\!\!-\!\!{\small F}$
+   符号：$^A_B{\large=}\!\boxed{\&}\!\!-\!\!{\small F}$
 
    表达式：$F=A \cdot B$
 
 2. 或门
 
-   符号：$^A_B{\large=}\boxed{\geq{1}}\!\!-\!\!{\small F}$
+   符号：$^A_B{\large=}\!\boxed{\geq{1}}\!\!-\!\!{\small F}$
 
    表达式:$F=A+B$
 
 3. 非门
 
-   符号：$A{\large-}\boxed{1}{\normalsize\circ}\!\!-\!\!{\small F}$
+   符号：$A{\large-}\!\boxed{1}{\normalsize\circ}\!\!-\!\!{\small F}$
 
    表达式:$F=\overline A$
 
@@ -189,13 +189,13 @@ $$
 
    1. 与非门
 
-      符号:$^A_B{\large=}\boxed{\&}{\normalsize\circ} \!\!-\!\!{\small F}$
+      符号:$^A_B{\large=}\!\boxed{\&}{\normalsize\circ} \!\!-\!\!{\small F}$
 
       表达式:$F=\overline{AB}$
 
    2. 或非门
 
-      符号:$^A_B{\large=}\boxed{\geq{1}}{\normalsize\circ} \!\!-\!\!{\small F}$
+      符号:$^A_B{\large=}\!\boxed{\geq{1}}{\normalsize\circ} \!\!-\!\!{\small F}$
 
       表达式:$F=\overline{A+B}$
 
@@ -205,7 +205,7 @@ $$
 
    4. 异或门
 
-      符号:$^A_B{\large=}\boxed{={1}} \!\!-\!\!{\small F}$
+      符号:$^A_B{\large=}\!\boxed{={1}} \!\!-\!\!{\small F}$
 
       表达式:$F=A\oplus{}B=A\overline{B}+\overline{A}B$
 
@@ -222,7 +222,7 @@ $$
 \begin{aligned}
    F(A,B,C)=AB+\overline{A}C\\
    =(\overline{A}+B)(A+C)\\
-   =\overline{[\overline{(A+C)}+\overline{\overline{(A}+B)}]}\\
+   =\overline{\left[\overline{(A+C)}+\overline{(\overline{A}+B)}\right]}\\
    =\overline{(A\overline{B}+\overline{A}~\overline{})}
 \end{aligned}
 $$
@@ -297,11 +297,11 @@ $$
 
 - 输出函数
 
-  $$Z_i=f_i(x_1,\cdots,x_n,y_1,\dots,y_r),~i=1,\cdots,m$$
+  $$Z_i=f_i(x_1,\dots,x_n,y_1,\dots,y_r),~i=1,\dots,m$$
 
 - 激励函数
 
-  $$Y_j=g_j(x_1,\cdots,x_n,y_1,\cdots,y_r),~j=1,\cdots,r$$
+  $$Y_j=g_j(x_1,\dots,x_n,y_1,\dots,y_r),~j=1,\dots,r$$
 
 统一的时钟信号(不能太短)来临后,电路状态才改变,且只有一次。
 
