@@ -3,7 +3,7 @@
 ## Tools
 
 - Markdown
-- $\LaTeX$
+- LaTeX
 
 ## Content
 
