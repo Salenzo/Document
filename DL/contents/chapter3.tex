@@ -5,53 +5,53 @@
 
 \begin{enumerate}
 
-\item 与门
+    \item 与门
 
-符号：$^A_B{\large=}\!\boxed{\&}\!\!-\!\!{\small F}$
+          符号：$^A_B\!\!=\!\!\boxed{\&}\!\!-\!\!{\scriptstyle F}$
 
-表达式：$F=A \cdot B$
+          表达式：$F=A \cdot B$
 
-\item 或门
+    \item 或门
 
-符号：$^A_B{\large=}\!\boxed{\geq{1}}\!\!-\!\!{\small F}$
+          符号：$^A_B\!\!=\!\!\boxed{\geq{1}}\!\!-\!\!{\scriptstyle F}$
 
-表达式:$F=A+B$
+          表达式:$F=A+B$
 
-\item 非门
+    \item 非门
 
-符号：$A{\large-}\!\boxed{1}{\normalsize\circ}\!\!-\!\!{\small F}$
+          符号：$A\!\!-\!\!\boxed{1}{\scriptstyle\circ}\!\!-\!\!{\scriptstyle F}$
 
-表达式:$F=\overline A$
+          表达式:$F=\overline A$
 
-\item 复合逻辑门
+    \item 复合逻辑门
 
-\begin{enumerate}
+          \begin{enumerate}
 
-    \item 与非门
+              \item 与非门
 
-          符号:$^A_B{\large=}\!\boxed{\&}{\normalsize\circ} \!\!-\!\!{\small F}$
+                    符号:$^A_B\!\!=\!\!\boxed{\&}{\scriptstyle\circ} \!\!-\!\!{\scriptstyle F}$
 
-          表达式:$F=\overline{AB}$
+                    表达式:$F=\overline{AB}$
 
-    \item 或非门
+              \item 或非门
 
-          符号:$^A_B{\large=}\!\boxed{\geq{1}}{\normalsize\circ} \!\!-\!\!{\small F}$
+                    符号:$^A_B\!\!=\!\!\boxed{\geq{1}}{\scriptstyle\circ} \!\!-\!\!{\scriptstyle F}$
 
-          表达式:$F=\overline{A+B}$
+                    表达式:$F=\overline{A+B}$
 
-    \item 与或非门
+              \item 与或非门
 
-          表达式:$F=\overline{AB+CD}$
+                    表达式:$F=\overline{AB+CD}$
 
-    \item 异或门
+              \item 异或门
 
-          符号:$^A_B{\large=}\!\boxed{={1}} \!\!-\!\!{\small F}$
+                    符号:$^A_B\!\!=\!\!\boxed{={1}} \!\!-\!\!{\scriptstyle F}$
 
-          表达式:$F=A\oplus{}B=A\overline{B}+\overline{A}B$
+                    表达式:$F=A\oplus{}B=A\overline{B}+\overline{A}B$
 
-          同或运算:$F=A\odot{}B=AB+\overline{AB}$
+                    同或运算:$F=A\odot{}B=AB+\overline{AB}$
 
-\end{enumerate}
+          \end{enumerate}
 
 \end{enumerate}
 
@@ -165,12 +165,15 @@
     \centering
     \begin{tabular}{lc|c|c}
         \toprule
-				{}                         & OUT\_EXPECTED & OUT\_ERROR           \\
+        {}                      & OUT\_EXPECTED & OUT\_ERROR           \\
         \midrule
-				\multirow{2}*{静态冒险} & 偏 1         & 1         & 1-0-1   \\
-                                   & 偏 0         & 0         & 0-1-0   \\
-				\multirow{2}*{动态冒险} & 偏 1         & 0-1       & 0-1-0-1 \\
-                                   & 偏 0         & 1-0       & 1-0-1-0 \\
+        \multirow{2}*{静态冒险} & 偏 1          & 1          & 1-0-1   \\
+        \hline
+                                & 偏 0          & 0          & 0-1-0   \\
+        \hline
+        \multirow{2}*{动态冒险} & 偏 1          & 0-1        & 0-1-0-1 \\
+        \hline
+                                & 偏 0          & 1-0        & 1-0-1-0 \\
         \bottomrule
     \end{tabular}
 \end{table}

@@ -11,15 +11,18 @@
 
           \begin{table}[!htbp]
               \centering
-              \begin{tabular}{c|c|c}
-                  \toprule
+              \begin{tabular}{|c|c|c|}
+                  \hline
                   A & B & F \\
-                  \midrule
+                  \hline
                   0 & 0 & 0 \\
+                  \hline
                   0 & 1 & 1 \\
+                  \hline
                   1 & 0 & 1 \\
+                  \hline
                   1 & 1 & 1 \\
-                  \bottomrule
+                  \hline
               \end{tabular}
           \end{table}
 
@@ -27,15 +30,18 @@
 
           \begin{table}[!htbp]
               \centering
-              \begin{tabular}{c|c|c}
-                  \toprule
+              \begin{tabular}{|c|c|c|}
+                  \hline
                   A & B & F \\
-                  \midrule
+                  \hline
                   0 & 0 & 0 \\
+                  \hline
                   0 & 1 & 0 \\
+                  \hline
                   1 & 0 & 0 \\
+                  \hline
                   1 & 1 & 1 \\
-                  \bottomrule
+                  \hline
               \end{tabular}
           \end{table}
 
@@ -43,13 +49,14 @@
 
           \begin{table}[!htbp]
               \centering
-              \begin{tabular}{c|c}
-                  \toprule
+              \begin{tabular}{|c|c|}
+                  \hline
                   A & F \\
-                  \midrule
+                  \hline
                   0 & 1 \\
+                  \hline
                   1 & 0 \\
-                  \bottomrule
+                  \hline
               \end{tabular}
           \end{table}
 
@@ -110,54 +117,54 @@
 
 \begin{enumerate}
 
-\item 最小项及标准与或式
+    \item 最小项及标准与或式
 
-最小项:\textbf{与项}包含全部 n 个变量，全部以原变量或反变量的形式出现，且只出现一次
+          最小项:\textbf{与项}包含全部 n 个变量，全部以原变量或反变量的形式出现，且只出现一次
 
-例如:$A\overline{B}C$
+          例如:$A\overline{B}C$
 
-函数简写作:$\sum{m(0,1,2,3\dots)}$
+          函数简写作:$\sum{m(0,1,2,3\dots)}$
 
-\item 最大项及标准或与式
+    \item 最大项及标准或与式
 
-最大项:\textbf{或项}包含全部 n 个变量，全部以原变量或反变量的形式出现，且只出现一次
+          最大项:\textbf{或项}包含全部 n 个变量，全部以原变量或反变量的形式出现，且只出现一次
 
-例如:$A+\overline{B}+C$
+          例如:$A+\overline{B}+C$
 
-函数简写作:$\prod{M(0,1,2,3\dots)}$
+          函数简写作:$\prod{M(0,1,2,3\dots)}$
 
-\item 两者转换
-
-\begin{enumerate}
-
-    \item 代数转换法
+    \item 两者转换
 
           \begin{enumerate}
 
-              \item 转换到最小项之和
-              \item 转换为一般与或式
-              \item 将非最小项拓展到最小项
+              \item 代数转换法
+
+                    \begin{enumerate}
+
+                        \item 转换到最小项之和
+                        \item 转换为一般与或式
+                        \item 将非最小项拓展到最小项
+
+                    \end{enumerate}
+
+                    \begin{enumerate}
+
+                        \item 转换到最大项之积
+                        \item 转换为一般或与式
+                        \item 将非最大项转换到最大项
+
+                    \end{enumerate}
+
+              \item 真值表转换法
+
+                    \begin{enumerate}
+
+                        \item 1:$\sum{m(0,2,4,6\dots)}$
+                        \item 0:$\prod{M(1,3,5,7\dots)}$
+
+                    \end{enumerate}
 
           \end{enumerate}
-
-          \begin{enumerate}
-
-              \item 转换到最大项之积
-              \item 转换为一般或与式
-              \item 将非最大项转换到最大项
-
-          \end{enumerate}
-
-    \item 真值表转换法
-
-          \begin{enumerate}
-
-              \item 1:$\sum{m(0,2,4,6\dots)}$
-              \item 0:$\prod{M(1,3,5,7\dots)}$
-
-          \end{enumerate}
-
-\end{enumerate}
 
 \end{enumerate}
 
@@ -188,15 +195,18 @@
 
           \begin{table}[!htbp]
               \centering
-              \begin{tabular}{l|c|c|c|c}
-                  \toprule
-                  $_{AB}^{CD}$ & 00                                                       & 01                                        & 11                             & 10                                          \\
-                  \midrule
-                  00           & $\overline{A}\,\overline{B}\,\overline{C}\,\overline{D}$ & $\overline{A}B\overline{C}\,\overline{D}$ & $AB\overline{C}\,\overline{D}$ & $A\overline{B}\,\overline{C}\,\overline{D}$ \\
-                  01           & $\overline{A}\,\overline{B}\,\overline{C}D$              & $\overline{A}B\overline{C}D$              & $AB\overline{C}D$              & $A\overline{B}\,\overline{C}D$              \\
-                  11           & $\overline{A}\,\overline{B}CD$                           & $\overline{A}BCD$                         & $ABCD$                         & $A\overline{B}CD$                           \\
-                  10           & $\overline{A}\,\overline{B}C\overline{D}$                & $\overline{A}BC\overline{D}$              & $ABC\overline{D}$              & $A\overline{B}C\overline{D}$                \\
-                  \bottomrule
+              \begin{tabular}{|r|c|c|c|c|}
+                  \hline
+                  \diagbox{AB}{CD} & 00                                                       & 01                                        & 11                             & 10                                          \\
+                  \hline
+                  00               & $\overline{A}\,\overline{B}\,\overline{C}\,\overline{D}$ & $\overline{A}B\overline{C}\,\overline{D}$ & $AB\overline{C}\,\overline{D}$ & $A\overline{B}\,\overline{C}\,\overline{D}$ \\
+                  \hline
+                  01               & $\overline{A}\,\overline{B}\,\overline{C}D$              & $\overline{A}B\overline{C}D$              & $AB\overline{C}D$              & $A\overline{B}\,\overline{C}D$              \\
+                  \hline
+                  11               & $\overline{A}\,\overline{B}CD$                           & $\overline{A}BCD$                         & $ABCD$                         & $A\overline{B}CD$                           \\
+                  \hline
+                  10               & $\overline{A}\,\overline{B}C\overline{D}$                & $\overline{A}BC\overline{D}$              & $ABC\overline{D}$              & $A\overline{B}C\overline{D}$                \\
+                  \hline
               \end{tabular}
           \end{table}
 

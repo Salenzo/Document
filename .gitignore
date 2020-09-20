@@ -3,3 +3,6 @@
 *.run.xml
 *.thm
 *.aux
+*.log
+*.synctex(busy)
+*.toc
