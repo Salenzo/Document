@@ -1,0 +1,99 @@
+\chapter{同步时序电路}
+\newpage
+
+\section{结构}
+
+\begin{enumerate}
+
+    \item 组合电路
+    \item 储存电路
+
+\end{enumerate}
+
+\begin{enumerate}
+
+\item 输出函数
+
+\begin{equation}
+    Z_i=f_i(x_1,\dots,x_n,y_1,\dots,y_r),~i=1,\dots,m
+\end{equation}
+
+\item 激励函数
+
+\begin{equation}
+    Y_j=g_j(x_1,\dots,x_n,y_1,\dots,y_r),~j=1,\dots,r
+\end{equation}
+
+统一的时钟信号(不能太短)来临后,电路状态才改变,且只有一次。
+
+\newpage
+
+时钟信号起同步作用
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{lc|c|c}
+        \toprule
+        信号来临前 & 现态 & $y^{n}$   \\
+        信号来临后 & 次态 & $y^{n+1}$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{描述}
+
+\begin{enumerate}
+    \item 状态表
+    \item 状态图
+\end{enumerate}
+
+\newpage
+
+\section{触发器}
+
+\begin{enumerate}
+    \item 储存电路
+    \item 能储存一位二进制数
+    \item 在任一时刻只处于一种\textbf{稳态}
+\end{enumerate}
+
+\subsection{R-S 触发器}
+
+\begin{enumerate}
+    \item 基本型(锁存器)
+    \item 直接 复位-置位
+    \item 组成:
+    \item 交叉耦合或非门
+    \item 交叉耦合与非门
+    \item 时钟型
+    \item 4\*与非
+\end{enumerate}
+
+空翻现象:由于时钟信号宽度而多次翻转,可由主从触发器(串联)解决
+
+\newpage
+
+\subsection{D 触发器}
+
+为了解决 R-S 触发器输入同为 1 时触发器状态不确定问题
+
+\begin{enumerate}
+    \item 单输入端
+    \item 输入信号转换为互补信号
+\end{enumerate}
+
+\subsection{J-K 触发器}
+
+为了解决 R-S 触发器输入同为 1 时触发器状态不确定问题,同时使触发器有两个输入端
+
+\subsection{T 触发器}
+
+JK 端合并为 T 端
+
+\newpage
+
+\section{电路分析}
+
+\section{电路设计}
+
+\newpage

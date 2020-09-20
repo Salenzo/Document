@@ -1,0 +1,202 @@
+\chapter{组合逻辑电路}
+\newpage
+
+\section{逻辑门}
+
+\begin{enumerate}
+
+\item 与门
+
+符号：$^A_B{\large=}\!\boxed{\&}\!\!-\!\!{\small F}$
+
+表达式：$F=A \cdot B$
+
+\item 或门
+
+符号：$^A_B{\large=}\!\boxed{\geq{1}}\!\!-\!\!{\small F}$
+
+表达式:$F=A+B$
+
+\item 非门
+
+符号：$A{\large-}\!\boxed{1}{\normalsize\circ}\!\!-\!\!{\small F}$
+
+表达式:$F=\overline A$
+
+\item 复合逻辑门
+
+\begin{enumerate}
+
+    \item 与非门
+
+          符号:$^A_B{\large=}\!\boxed{\&}{\normalsize\circ} \!\!-\!\!{\small F}$
+
+          表达式:$F=\overline{AB}$
+
+    \item 或非门
+
+          符号:$^A_B{\large=}\!\boxed{\geq{1}}{\normalsize\circ} \!\!-\!\!{\small F}$
+
+          表达式:$F=\overline{A+B}$
+
+    \item 与或非门
+
+          表达式:$F=\overline{AB+CD}$
+
+    \item 异或门
+
+          符号:$^A_B{\large=}\!\boxed{={1}} \!\!-\!\!{\small F}$
+
+          表达式:$F=A\oplus{}B=A\overline{B}+\overline{A}B$
+
+          同或运算:$F=A\odot{}B=AB+\overline{AB}$
+
+\end{enumerate}
+
+\newpage
+
+\begin{enumerate}
+
+    \item 根据输入逐级写出输出
+    \item 化简逻辑功能
+    \item 列出真值表
+    \item 讨论功能
+
+\end{enumerate}
+
+\section{逻辑函数实现}
+
+\begin{equation}
+    \begin{aligned}
+        F(A,B,C)=AB+\overline{A}C                                             \\
+        =(\overline{A}+B)(A+C)                                                \\
+        =\overline{\left[\overline{(A+C)}+\overline{(\overline{A}+B)}\right]} \\
+        =\overline{(A\overline{B}+\overline{A}~\overline{})}
+    \end{aligned}
+\end{equation}
+
+\newpage
+
+\begin{enumerate}
+
+    \item 与非
+
+          \begin{enumerate}
+
+              \item 化为最简**与或**式
+              \item 变换为**与非\*2** 式
+
+          \end{enumerate}
+
+    \item 或非
+
+          \begin{enumerate}
+
+              \item 化为最简**或与**式
+              \item 变换为**或非\*2**式
+
+          \end{enumerate}
+
+
+    \item 与或非
+
+          \begin{enumerate}
+
+              \item 化为最简**与或**式
+              \item 变换为**与或非**式
+
+          \end{enumerate}
+
+    \item 异或(部分才能实现,但简单)
+
+\end{enumerate}
+
+\newpage
+
+\section{组合逻辑电路分析}
+
+\begin{enumerate}
+
+    \item 输入标字母
+    \item 从输入端按深度一层层写出逻辑函数
+    \item 用前一层输出代入后一层并继续重复
+    \item 简化逻辑函数,判断合理性
+    \item 列出逻辑电路的真值表
+    \item 判断功能并评价完善
+
+\end{enumerate}
+
+\section{组合逻辑电路设计}
+
+\begin{enumerate}
+
+    \item 根据逻辑要求构建真值表
+    \item 根据真值表写出逻辑函数
+    \item 将逻辑函数化简并转换成适当形式
+
+\end{enumerate}
+
+\newpage
+
+\section{竞争与冒险}
+
+原因:信号传输延迟
+
+用输入、输出时序图表示
+
+\subsection{竞争}
+
+竞争:输入信号通过不同途径达到输出端的时间不同(随机过程)
+
+\begin{enumerate}
+
+    \item 非临界竞争:不会产生错误
+    \item 临界竞争:导致逻辑错误
+
+\end{enumerate}
+
+\subsection{冒险}
+
+冒险(\textbf{暂时}、\textbf{瞬态}现象):输出端的尖脉冲
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{lc|c|c}
+        \toprule
+                                   & OUT_EXPECTED & OUT_ERROR           \\
+        \\midrule
+        \multicolumn{2}*{静态冒险} & 偏 1         & 1         & 1-0-1   \\
+                                   & 偏 0         & 0         & 0-1-0   \\
+        \multicolumn{2}*{动态冒险} & 偏 1         & 0-1       & 0-1-0-1 \\
+                                   & 偏 0         & 1-0       & 1-0-1-0 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\newpage
+
+\begin{enumerate}
+
+    \item 代数判别法
+
+          从\textbf{函数表达式结构}判别
+
+          \begin{enumerate}
+
+              \item 如果某变量同时以原变量反变量形式存在
+              \item 将其他变量可能的取值代入
+              \item 如果出现$x+\overline{x}$或$x\overline{x}$则可能产生冒险
+
+          \end{enumerate}
+
+    \item 卡诺图判别法
+
+          \begin{enumerate}
+
+              \item 画出各**与项**对应卡诺圈
+              \item 如果两卡诺圈**相切**(存在共用的相邻最小项)则可能产生冒险
+          \end{enumerate}
+
+\end{enumerate}
+
+\newpage

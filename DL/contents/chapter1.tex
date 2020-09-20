@@ -1,0 +1,61 @@
+\chapter{基础}
+\newpage
+
+\section{二进制 八进制 十进制 十六进制 相互转化}
+
+\subsection{十进制和其他进制的相互转换}
+
+\begin{enumerate}
+
+\item 其他进制转换为十进制：
+
+各进制数按权展开并相加
+
+\item 十进制转换为其他进制：
+
+\begin{enumerate}
+
+    \item 整数：除以基数取余，直到商为零，逆序
+    \item 小数：乘以基数取整， 顺序
+
+\end{enumerate}
+
+\newpage
+
+\subsection{二进制 八进制 十六进制 的相互转换}
+\newpage
+
+以小数点为界向两侧划分，按基数划分组，不够则补零
+
+\subsection{8421BCD 码 格雷码 余 3 码 与十进制之间的转换}
+
+\begin{enumerate}
+
+    \item 8421BCD
+    \item G
+    \item 余 3
+
+\end{enumerate}
+
+\newpage
+
+\section{十进制与 原码 反码 补码 之间的转换}
+
+符号位 0，正数反码补码和原码相同
+
+符号位 1，负数反码数值取反，补码在反码最低有效位上加一
+
+\newpage
+
+\section{校验法}
+
+\begin{enumerate}
+
+    \item 奇偶校验码:可以验证传输过程是否产生了错误
+    \item 奇校验:为二进制添加一位校验码，使 1 的数量为奇数
+    \item 偶校验:为二进制添加一位校验码，使 1 的数量为偶数
+    \item 海明码：传输过程中错一位概率大，通过海明码可以验证是哪位出错
+
+\end{enumerate}
+
+\newpage

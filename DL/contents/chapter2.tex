@@ -1,0 +1,216 @@
+\chapter{逻辑代数}
+\newpage
+
+\section{逻辑代数运算法则}
+
+\subsection{逻辑运算}
+
+\begin{enumerate}
+
+    \item $F=A+B~~~(F=A\wedge B)$
+
+          \begin{table}[!htbp]
+              \centering
+              \begin{tabular}{c|c|c}
+                  \toprule
+                  A & B & F
+                  \midrule
+                  0 & 0 & 0 \\
+                  0 & 1 & 1 \\
+                  1 & 0 & 1 \\
+                  1 & 1 & 1 \\
+                  \bottomrule
+              \end{tabular}
+          \end{table}
+
+    \item $F=A\cdot B~~~(F=A\vee B)$
+
+          \begin{table}[!htbp]
+              \centering
+              \begin{tabular}{c|c|c}
+                  \toprule
+                  A & B & F
+                  \midrule
+                  0 & 0 & 0 \\
+                  0 & 1 & 0 \\
+                  1 & 0 & 0 \\
+                  1 & 1 & 1 \\
+                  \bottomrule
+              \end{tabular}
+          \end{table}
+
+    \item $F=\overline A$
+
+          \begin{table}[!htbp]
+              \centering
+              \begin{tabular}{c|c}
+                  \toprule
+                  A & F
+                  \midrule
+                  0 & 1 \\
+                  1 & 0 \\
+                  \bottomrule
+              \end{tabular}
+          \end{table}
+
+\end{enumerate}
+
+\newpage
+
+\subsection{基本定律}
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{c|c|c}
+        \toprule
+        1 & $A+B=B+A$                                      & $AB=BA$                                 \\
+        2 & $A+(B+C)=(A+B)+C$                              & $A(BC)=(AB)C$                           \\
+        3 & $A+(BC)=(A+B)(A+C)$                            & $A(B+C)=AB+AC$                          \\
+        4 & $A+0=A , A+1=0$                                & $A \cdot 1=A , A \cdot 0=0$             \\
+        5 & $A+\overline A =1$                             & $A \cdot \overline A  =0$               \\
+        6 & $A+A=A$                                        & $A \cdot A=A$                           \\
+        7 &                                                & $\overline{\overline A}=A$              \\
+        8 & $\overline{A+B}=\overline A \cdot \overline B$ & $\overline{AB}=\overline A+\overline B$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\newpage
+
+\subsection{代入规则}
+
+\subsection{反演规则}
+
+\begin{equation}
+    F\left\{
+    \begin{aligned}
+        1 & \Longleftrightarrow 0           \\
+        + & \Longleftrightarrow \bullet     \\
+        A & \Longleftrightarrow \overline A
+    \end{aligned}
+    \right\}\overline F
+\end{equation}
+
+\subsection{对偶规则}
+
+\begin{equation}
+    F\left\{
+    \begin{aligned}
+        1 & \Longleftrightarrow 0       \\
+        + & \Longleftrightarrow \bullet
+    \end{aligned}
+    \right\} F'
+\end{equation}
+
+\subsection{常用公式}
+
+\newpage
+
+\section{逻辑函数标准形式}
+
+\begin{enumerate}
+
+\item 最小项及标准与或式
+
+最小项:\textbf{与项}包含全部 n 个变量，全部以原变量或反变量的形式出现，且只出现一次
+
+例如:$A\overline{B}C$
+
+函数简写作:$\sum{m(0,1,2,3\dots)}$
+
+\item 最大项及标准或与式
+
+最大项:\textbf{或项}包含全部 n 个变量，全部以原变量或反变量的形式出现，且只出现一次
+
+例如:$A+\overline{B}+C$
+
+函数简写作:$\prod{M(0,1,2,3\dots)}$
+
+\item 两者转换
+
+\begin{enumerate}
+
+    \item 代数转换法
+
+          \begin{enumerate}
+
+              \item 转换到最小项之和
+              \item 转换为一般与或式
+              \item 将非最小项拓展到最小项
+
+          \end{enumerate}
+
+          \begin{enumerate}
+
+              \item 转换到最大项之积
+              \item 转换为一般或与式
+              \item 将非最大项转换到最大项
+
+          \end{enumerate}
+
+    \item 真值表转换法
+
+          \begin{enumerate}
+
+              \item 1:$\sum{m(0,2,4,6\dots)}$
+              \item 0:$\prod{M(1,3,5,7\dots)}$
+
+          \end{enumerate}
+
+\end{enumerate}
+
+\newpage
+
+\section{逻辑函数化简}
+
+\begin{enumerate}
+
+    \item 代数化简化
+
+          \begin{enumerate}
+
+              \item 与或
+              \item 并项法$AB+A\overline{B}=A$
+              \item 吸收法$A+AB=A$
+              \item 消去法$A+\overline{A}B=A+B$
+              \item 配项法$A\cdot{1}=1,A+\overline{A}=1$
+              \item 或与
+              \item 定理法
+              \item 求偶得到$F'(与或)$化简再求偶得到 F
+
+          \end{enumerate}
+
+
+    \item 卡诺图简化
+
+
+          \begin{table}[!htbp]
+              \centering
+              \begin{tabular}{l|c|c|c|c}
+                  \toprule
+                  $_{AB}^{CD}$ & 00                                                       & 01                                        & 11                             & 10                                          \\
+                  \midrule
+                  00           & $\overline{A}\,\overline{B}\,\overline{C}\,\overline{D}$ & $\overline{A}B\overline{C}\,\overline{D}$ & $AB\overline{C}\,\overline{D}$ & $A\overline{B}\,\overline{C}\,\overline{D}$ \\
+                  01           & $\overline{A}\,\overline{B}\,\overline{C}D$              & $\overline{A}B\overline{C}D$              & $AB\overline{C}D$              & $A\overline{B}\,\overline{C}D$              \\
+                  11           & $\overline{A}\,\overline{B}CD$                           & $\overline{A}BCD$                         & $ABCD$                         & $A\overline{B}CD$                           \\
+                  10           & $\overline{A}\,\overline{B}C\overline{D}$                & $\overline{A}BC\overline{D}$              & $ABC\overline{D}$              & $A\overline{B}C\overline{D}$                \\
+                  \bottomrule
+              \end{tabular}
+          \end{table}
+
+          \begin{enumerate}
+              \item $~AB+A\overline{B}=A$
+              \item $\overline{A}B\overline{C}+\overline{A}BC+AB\overline{C}+ABC=B\overline{C}+BC=B$
+          \end{enumerate}
+
+          \begin{enumerate}
+
+              \item 卡诺圈尽量大
+              \item 卡诺圈个数尽量少
+              \item 每个 1 可以被多个卡诺圈包含
+
+          \end{enumerate}
+
+\end{enumerate}
+
+\newpage
