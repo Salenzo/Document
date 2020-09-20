@@ -53,6 +53,8 @@
 
 \end{enumerate}
 
+\end{enumerate}
+
 \newpage
 
 \begin{enumerate}
@@ -163,11 +165,11 @@
     \centering
     \begin{tabular}{lc|c|c}
         \toprule
-                                   & OUT_EXPECTED & OUT_ERROR           \\
-        \\midrule
-        \multicolumn{2}*{静态冒险} & 偏 1         & 1         & 1-0-1   \\
+				{}                         & OUT\_EXPECTED & OUT\_ERROR           \\
+        \midrule
+				\multirow{2}*{静态冒险} & 偏 1         & 1         & 1-0-1   \\
                                    & 偏 0         & 0         & 0-1-0   \\
-        \multicolumn{2}*{动态冒险} & 偏 1         & 0-1       & 0-1-0-1 \\
+				\multirow{2}*{动态冒险} & 偏 1         & 0-1       & 0-1-0-1 \\
                                    & 偏 0         & 1-0       & 1-0-1-0 \\
         \bottomrule
     \end{tabular}
