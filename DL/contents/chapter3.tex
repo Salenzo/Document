@@ -163,16 +163,16 @@
 
 \begin{table}[!htbp]
     \centering
-    \begin{tabular}{lc|c|c}
+    \begin{tabular}{lccc}
         \toprule
         {}                      & OUT\_EXPECTED & OUT\_ERROR           \\
         \midrule
         \multirow{2}*{静态冒险} & 偏 1          & 1          & 1-0-1   \\
-        \hline
+        \cline{2-4}
                                 & 偏 0          & 0          & 0-1-0   \\
         \hline
         \multirow{2}*{动态冒险} & 偏 1          & 0-1        & 0-1-0-1 \\
-        \hline
+        \cline{2-4}
                                 & 偏 0          & 1-0        & 1-0-1-0 \\
         \bottomrule
     \end{tabular}
