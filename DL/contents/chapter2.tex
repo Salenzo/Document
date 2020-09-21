@@ -7,63 +7,58 @@
 
 \begin{enumerate}
 
-\item $F=A+B~~~(F=A\wedge B)$
-\item $F=A\cdot B~~~(F=A\vee B)$
-\item $F=\overline A$
+    \item $F=A+B~~~(F=A\wedge B)$
 
-\begin{table*}[!htbp]
+          \begin{table}[!htbp]
+              \centering
+              \begin{tabular}{|c|c|c|}
+                  \hline
+                  A & B & F \\
+                  \hline
+                  0 & 0 & 0 \\
+                  \hline
+                  0 & 1 & 1 \\
+                  \hline
+                  1 & 0 & 1 \\
+                  \hline
+                  1 & 1 & 1 \\
+                  \hline
+              \end{tabular}
+          \end{table}
 
-\begin{minipage}{\columnwidth}
-    \caption{$F=A+B~~~(F=A\wedge B)$}
-    \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        A & B & F \\
-        \hline
-        0 & 0 & 0 \\
-        \hline
-        0 & 1 & 1 \\
-        \hline
-        1 & 0 & 1 \\
-        \hline
-        1 & 1 & 1 \\
-        \hline
-    \end{tabular}
-\end{minipage}
+    \item $F=A\cdot B~~~(F=A\vee B)$
 
-\begin{minipage}{\columnwidth}
-    \caption{$F=A\cdot B~~~(F=A\vee B)$}
-    \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        A & B & F \\
-        \hline
-        0 & 0 & 0 \\
-        \hline
-        0 & 1 & 0 \\
-        \hline
-        1 & 0 & 0 \\
-        \hline
-        1 & 1 & 1 \\
-        \hline
-    \end{tabular}
-\end{minipage}
+          \begin{table}[!htbp]
+              \centering
+              \begin{tabular}{|c|c|c|}
+                  \hline
+                  A & B & F \\
+                  \hline
+                  0 & 0 & 0 \\
+                  \hline
+                  0 & 1 & 0 \\
+                  \hline
+                  1 & 0 & 0 \\
+                  \hline
+                  1 & 1 & 1 \\
+                  \hline
+              \end{tabular}
+          \end{table}
 
-\begin{minipage}{\columnwidth}
-    \caption{$F=\overline A$}
-    \centering
-    \begin{tabular}{|c|c|}
-        \hline
-        A & F \\
-        \hline
-        0 & 1 \\
-        \hline
-        1 & 0 \\
-        \hline
-    \end{tabular}
-\end{minipage}
+    \item $F=\overline A$
 
-\end{table*}
+          \begin{table}[!htbp]
+              \centering
+              \begin{tabular}{|c|c|}
+                  \hline
+                  A & F \\
+                  \hline
+                  0 & 1 \\
+                  \hline
+                  1 & 0 \\
+                  \hline
+              \end{tabular}
+          \end{table}
 
 \end{enumerate}
 
@@ -86,6 +81,8 @@
         \bottomrule
     \end{tabular}
 \end{table}
+
+\newpage
 
 \subsection{代入规则}
 
@@ -122,19 +119,19 @@
 
     \item 最小项及标准与或式
 
-          最小项：\textbf{与项}包含全部 n 个变量，全部以原变量或反变量的形式出现，且只出现一次
+          最小项:\textbf{与项}包含全部 n 个变量，全部以原变量或反变量的形式出现，且只出现一次
 
-          例如：$A\overline{B}C$
+          例如:$A\overline{B}C$
 
-          函数简写作：$\sum{m(0,1,2,3\dots)}$
+          函数简写作:$\sum{m(0,1,2,3\dots)}$
 
     \item 最大项及标准或与式
 
-          最大项：\textbf{或项}包含全部 n 个变量，全部以原变量或反变量的形式出现，且只出现一次
+          最大项:\textbf{或项}包含全部 n 个变量，全部以原变量或反变量的形式出现，且只出现一次
 
-          例如：$A+\overline{B}+C$
+          例如:$A+\overline{B}+C$
 
-          函数简写作：$\prod{M(0,1,2,3\dots)}$
+          函数简写作:$\prod{M(0,1,2,3\dots)}$
 
     \item 两者转换
 
