@@ -1,8 +1,98 @@
-\chapter{多态}
+\chapter{继承}
 \newpage
 
+\section{访问控制}
 
-\section{静态联编}
-\section{动态联编}
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{lccc}
+        \toprule
+                   & private(default)        & protected & public \\
+        \midrule
+        私有派生   & \multirow{3}*{不可访问} & 私有      & 私有   \\
+        受保护派生 &                         & 受保护    & 受保护 \\
+        公有派生   &                         & 受保护    & 公有   \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{改变访问限制}
+
+使用 using 声明改变访问限制：
+\begin{lstlisting}[frame=shadowbox]
+    class D : B {
+    private:
+        float y;
+        using B::set_x(); //set_x() is public in B
+    }
+\end{lstlisting}
+
+\subsection{同名覆盖}
+
+又称名字隐藏，如果派生类中添加的数据成员和基类中的数据成员（函数）同名，\textbf{派生类中的优先}，并隐藏了继承来的数组成员（函数），且可继承。
+
+\subsection{间接继承}
+
+数据成员可以通过继承链路继承，继承链路包括了基类和所有派生类。
+继承可以通过直接基类派生，也可以从间接基类派生。
+
+\newpage
+
+\section{继承机制下的构造和析构函数}
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{lccc}
+        \hline
+        构造函数 & 基类   & $->$ & 派生类 \\
+        析构函数 & 派生类 & $->$ & 基类   \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{继承机制下的构造函数}
+
+创建派生对象时，基类的构造函数将被自动调用，对\textbf{派生类对象中的基类部分}初始化。
+而派生类自己的构造函数则负责对象中的\textbf{派生类部分}的初始化。
+
+默认构造函数：
+\begin{enumerate}
+    \item 没有带明显形参的构造函数
+    \item 提供了默认实参的构造函数
+\end{enumerate}
+
+创建派生类对象时，必须显式（带括号）或隐式（无括号）调用。
+如果基类有构造函数但没有默认构造函数，派生类的构造函数\textbf{必须}显式调用基类的某个构造函数。
+
+\subsection{继承机制下的析构函数}
+
+执行次序与构造函数相反，从派生类到基类。
+
+\section{多继承}
+
+派生类有多个基类，是所有基类的组合体。
+
+\subsection{虚基类}
+
+为解决从同一间接基类继承多次而造成浪费和混淆的问题，使用虚基类继承，从而仅将同名数据成员的一份拷贝发送到派生类。
+
+\section{继承方式}
+
+\subsection{保护继承}
+
+\begin{enumerate}
+    \item 基类中所有公有成员在派生类中是保护成员
+    \item 基类中所有私有成员在派生类中是保护成员
+    \item 基类中所有私有成员仅在基类中可见
+\end{enumerate}
+
+
+\subsection{私有继承}
+
+\begin{enumerate}
+    \item 基类中所有公有成员在派生类中是私有成员
+    \item 基类中所有私有成员在派生类中是私有成员
+    \item 基类中所有私有成员仅在基类中可见
+\end{enumerate}
 
 \newpage

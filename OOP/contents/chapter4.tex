@@ -1,6 +1,125 @@
-\chapter{操作符重载}
+\chapter{多态}
 \newpage
 
+\section{运行期绑定和编译器绑定}
 
+多态的函数的绑定是\textbf{运行期绑定}而不是\textbf{编译期绑定}。
+
+\subsection{多态的前提}
+
+\begin{enumerate}
+    \item 必须存在一个继承体系结构
+    \item 继承体系结构中的一些类必须拥有同名的 virtual 函数
+    \item 至少有一个基类类型的指针或基类类型的引用，这个指针或引用可用来对 virtual 成员函数进行调用
+\end{enumerate}
+
+基类类型的指针可以指向任何基类对象和派生类对象。
+虚函数在系统中的运行期才对调用动作绑定。
+
+\subsection{虚函数成员继承}
+
+为了调用同一基类的类族的同名函数，不用定义多个指向各派生类的指针变量，而是使用虚函数用同一方式调用同一类族中不同类的所有同名函数。
+和普通成员函数相同，在派生类中虚成员函数也可以从基类中继承。
+
+\subsection{运行期绑定与虚成员函数表}
+
+vtable 虚成员函数表用来实现虚成员函数的运行期绑定。用途是支持运行期查询，使系统可以将一函数名绑定到虚成员函数表的特定入口地址。
+而如果在基类中重新定义，则会调用基类中的成员函数，无法达到多态效果。虚成员函数表需要额外的空间，查询也需要时间。
+构造函数不能是虚函数，析构函数可以是虚函数。
+
+\newpage
+
+\section{重载、覆盖和隐藏}
+
+只有虚函数在运行期绑定，是真正的多态。所以编译期多态机制与运行期多态机制相似，但也有区别。
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{lcccc}
+        \toprule
+                            & 有效域                                & 函数     & 同              & 异       \\
+        \midrule
+        重载                & 层次类                                & 虚 or 实 & 函数名          & 函数签名 \\
+        \hline
+        覆盖                & 层次类                                & 虚       & 函数名 and 签名 &          \\
+        \hline
+        \multirow{2}*{隐藏} & \multirow{2}*{顶层 or 同类内成员函数} & 实       & 函数名          & 函数签名 \\
+                            &                                       & 虚       & 函数名 and 签名 &          \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{enumerate}
+    \item 重载
+          同类中的成员函数或顶层函数签名不同而同名则称重载，属于编译器绑定。
+    \item 覆盖
+          派生类中虚成员函数与基类中函数成员同名且签名相同则称覆盖。
+    \item 隐藏（要避免）
+          同名而函数签名不同的层次类。
+\end{enumerate}
+
+\subsection{名字共享}
+
+\begin{enumerate}
+    \item 重载函数名的顶层函数
+    \item 重载构造函数
+    \item 同一类中非构造函数名字相同
+    \item 继承层次中的同名函数（特别是虚函数）
+\end{enumerate}
+
+\section{抽象基类}
+
+抽象基类不能实例化抽象基类的对象，用来指明派生类必须覆盖某些虚函数才能拥有对象。
+
+抽象基类：必须拥有至少一个纯虚函数。
+
+\subsection{纯虚函数}
+
+在虚成员函数声明的结尾加上$=0$即可将其定义为纯虚函数。
+
+\begin{lstlisting}[frame=shadowbox]
+    virtual void open() = 0;
+\end{lstlisting}
+
+\subsection{公共接口}
+
+抽象基类定义了一个公共接口，被所有从抽象基类派生的类共享。
+由于抽象基类只含有 public 成员，通常使用关键字 struct 声明抽象基类。
+
+\section{运行期类型识别（RTTI）}
+
+\begin{enumerate}
+    \item 在运行期对类型转换进行检查
+    \item 在运行期确定对象类型
+    \item 拓展 RTTI 
+\end{enumerate}
+
+\subsection{dynamic\_cast 操作符}
+
+在运行期对可能引发错误的转型操作进行测试。
+
+static\_cast 不做运行时检查，可能不安全。
+\begin{lstlisting}[frame=shadowbox]
+    class B {}
+    class D : public B {}
+    D* p;
+    p = new B;
+    p = static_cast<D*>(new B);
+\end{lstlisting}
+
+而 dynamic\_cast 虽然语法相同，但仅对多态类型（至少有一个虚函数）有效。
+dynamic\_cast 可以实现向上、向下转型。
+
+static\_cast 可以施加于任何类型，无论是否有多态性。
+dynamic\_cast 只能施加于具有多态性的类型，转型的目的类型只能是指针或引用。
+dynamic\_cast 虽然运行范围没有 static\_cast 广，但是只有 dynamic\_cast 能进行运行期安全检查。
+
+\subsection{typeid 操作符}
+
+确定\textbf{表达式}的类型。
+
+\begin{lstlisting}[frame=shadowbox]
+#inlcude <typeinfo>
+\end{lstlisting}
 
 \newpage
