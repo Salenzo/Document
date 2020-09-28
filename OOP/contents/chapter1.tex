@@ -1,26 +1,19 @@
-\chapter{对象和类}
+\chapter{类}
 \newpage
-
-\section{访问控制}
-
-\begin{table}[!htbp]
-    \centering
-    \begin{tabular}{lccc}
-        \toprule
-                   & private(default)        & protected & public \\
-        \midrule
-        私有派生   & \multirow{3}*{不可访问} & 私有      & 私有   \\
-        受保护派生 &                         & 受保护    & 受保护 \\
-        公有派生   &                         & 受保护    & 公有   \\
-        \bottomrule
-    \end{tabular}
-\end{table}
 
 \section{构造函数}
 
 \subsection{基本特征}
 
 构造函数是与类名相同的成员函数。
+
+编译器默认添加：
+\begin{enumerate}
+    \item 构造函数
+    \item 拷贝构造函数
+    \item 析构函数
+    \item 赋值运算符函数
+\end{enumerate}
 
 \begin{enumerate}
     \item 返回类型为void
@@ -34,7 +27,7 @@
 
 \subsection{拷贝构造函数}
 
-如果不提供，编译器会自动生成：将源对象所有数据成员的值逐一赋值给目标对象相应的数据成员
+如果不提供，编译器会自动生成：将源对象所有数据成员的值逐一赋值给目标对象相应的数据成员。
 
 \begin{lstlisting}[frame=shadowbox]
     Person(Person&);
@@ -43,7 +36,7 @@
 
 \subsection{转型构造函数}
 
-关闭因转型构造函数导致的隐式类型转换，将运行期错误变成了编译器错误
+关闭因转型构造函数导致的隐式类型转换，将运行期错误变成了编译器错误。
 
 \begin{lstlisting}[frame=shadowbox]
     explicit Person(const string& n) {name = n;}    
@@ -93,7 +86,7 @@
 
 \section{析构函数}
 
-析构函数当对象被\textbf{销毁}时，自动调用
+析构函数当对象被\textbf{销毁}时，自动调用。
 
 \begin{lstlisting}[frame=shadowbox]
     class C {
@@ -104,14 +97,65 @@
             int x;
 \end{lstlisting}
 
-没有\textbf{参数}和\textbf{返回值}，不能重载
+没有\textbf{参数}和\textbf{返回值}，不能重载。
 
 \section{指向对象的指针}
 
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{lccc}
+        \toprule
+        名称           & 符号 & 用途                         \\
+        \midrule
+        成员选择操作符 & .    & 对象和对象引用               \\
+        指针操作符     & ->   & 指针访问成员，专用于对象指针 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
+用途：
+\begin{enumerate}
+    \item 作为参数传递给函数，通过函数返回
+    \item 使用new([])操作符动态创建对象，然后返回对象的指针
+\end{enumerate}
 
 \subsection{常量指针 this}
 
-\section{类作用域}
+常量指针：不能赋值、递增、递减，不能在static成员函数中使用。
+
+避免命名冲突：
+\begin{lstlisting}[frame=shadowbox]
+void setID (const string& id) {this->id=id;}
+\end{lstlisting}
+
+\section{类数据成员和类成员函数}
+
+如果不使用 static(静态) 关键字，数据成员和成员函数都是属于\textbf{对象}的。
+而使用 static 则可以创建\textbf{类成员}：分为对象成员和实例成员。
+
+\subsection{类数据成员}
+
+静态成员只与类本身有关，与对象无关。它对整个类而言只有一个，而且必须在\textbf{任何程序块外}定义。
+
+\subsection{类成员函数}
+
+static 成员函数只能访问其他 static 成员，而非 static 成员都可以访问。
+同时 static 成员函数也可以是 inline 函数。
+
+可以通过两种方式访问：
+\begin{lstlisting}[frame=shadowbox]
+    C c1;
+    c1.Meth();
+    C::Meth();
+    unsigned x = c1.var;
+    unsigned y =C::var;
+\end{lstlisting}
+
+但首选用类直接访问，为了说明静态成员直接与类关联。
+
+\subsection{成员函数中的静态变量}
+
+如果将成员函数中的局部变量定义为静态变量，\textbf{类的所有对象在调用这个成员函数共享这个变量}。
+
 
 \newpage

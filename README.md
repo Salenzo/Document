@@ -17,5 +17,3 @@
 - Akhia
 
 ## TODO
-
-- DL build failed
