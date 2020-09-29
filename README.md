@@ -17,3 +17,5 @@
 - Akhia
 
 ## TODO
+
+- Physics chapter3
