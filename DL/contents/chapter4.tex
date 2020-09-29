@@ -12,19 +12,19 @@
 
 \begin{enumerate}
 
-\item 输出函数
+    \item 输出函数
 
-\begin{equation}
-    Z_i=f_i(x_1,\dots,x_n,y_1,\dots,y_r),~i=1,\dots,m
-\end{equation}
+          \begin{equation}
+              Z_i=f_i(x_1,\dots,x_n,y_1,\dots,y_r),~i=1,\dots,m
+          \end{equation}
 
-\item 激励函数
+    \item 激励函数
 
-\begin{equation}
-    Y_j=g_j(x_1,\dots,x_n,y_1,\dots,y_r),~j=1,\dots,r
-\end{equation}
+          \begin{equation}
+              Y_j=g_j(x_1,\dots,x_n,y_1,\dots,y_r),~j=1,\dots,r
+          \end{equation}
 
-统一的时钟信号(不能太短)来临后，电路状态才改变，且只有一次。
+          统一的时钟信号(不能太短)来临后，电路状态才改变，且只有一次。
 
 \end{enumerate}
 
@@ -66,10 +66,10 @@
     \item 基本型(锁存器)
     \item 直接 复位-置位
     \item 组成：
-    \item 交叉耦合或非门
-    \item 交叉耦合与非门
+          交叉耦合或非门
+          交叉耦合与非门
     \item 时钟型
-    \item 4\*与非
+          两个控制与非门+两个基本耦合与非门
 \end{enumerate}
 
 空翻现象：由于时钟信号宽度而多次翻转，可由主从触发器(串联)解决。
@@ -97,6 +97,21 @@ JK 端合并为 T 端。
 
 \section{电路分析}
 
+\begin{enumerate}
+    \item 根据电路，列出输出函数表达式和激励函数表达式
+    \item 建立状态转移真值表
+    \item 作出电路状态表，画出状态图
+    \item 用文字和时间图描述电路逻辑功能
+\end{enumerate}
+
 \section{电路设计}
+
+\begin{enumerate}
+    \item 根据逻辑要求，作出原始状态图和状态表
+    \item 状态简化
+    \item 状态编码
+    \item 求出激励函数和输出函数表达式
+    \item 画出逻辑电路图
+\end{enumerate}
 
 \newpage

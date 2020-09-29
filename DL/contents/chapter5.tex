@@ -2,11 +2,57 @@
 \newpage
 
 \section{特性}
+\begin{enumerate}
+    \item 电路没有统一的时钟信号，电路状态改变直接由外部输入信号变化引起
+    \item 类别：
+        脉冲
+        电平
+    \item 每一时刻仅允许一个输入发生变化
+    \item 只有电路进入一个新的稳定状态时才允许输入变化
+    \item Mealy 模型
+    \item Moore 模型
+    \item 研究工具：
+        脉冲：状态图，状态表
+        电平：状态流程图，时序图
+    \item 电平信号：基本信号
+    \item 脉冲信号：连续两次电平跳变
+\end{enumerate}
+
 
 \section{脉冲异步分析与设计}
 
+脉冲异步时序电路分析设计方法与同步时序电路相似，但有输入信号限制：
+\begin{enumerate}
+    \item 不允许同时出现两个及以上的输入脉冲
+    \item 对于 $n$ 个输入端的电路，仅有 $n+1$ 种不同的输入信号组合
+    \item 第二个脉冲到达必须在第一个脉冲引起的电路响应结束后 
+\end{enumerate}
+
 \section{电平异步分析与设计}
 
+信号限制：
+\begin{enumerate}
+    \item 同时只允许一个输入电平发生变化，而且且一定要是相邻的
+    \item 输入电平变化必须在第一个变化引起的电路响应结束后
+\end{enumerate}
+
+\begin{enumerate}
+    \item 根据逻辑电路图，写出激励函数和输出函数表达式
+    \item 列出状态流程表
+    \item 作出时序图
+    \item 说明电路逻辑功能
+\end{enumerate}
+
+\subsection{隐含图}
+
+\subsection{合并图}
+
 \subsection{电平异步竞争与冒险}
+
+\subsubsection{本质冒险}
+
+输入的原变量与反变量由于延迟没有同时保持互补状态，输入信号通过反馈回路的延迟小于通过反相器的延迟，电路出现不正常转移。
+
+要消除本质冒险，需要选择元件延迟特性或在反馈回路中加入足够的延迟。
 
 \newpage

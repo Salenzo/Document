@@ -3,24 +3,158 @@
 
 \section{二进制并行加法器}
 
+\subsection{逻辑功能}
+
+产生两个二进制算术和。
+
+\subsection{结构}
+
+由全加器构成进位链无法完成\textbf{超前进位}。
+
+74283
+
+\subsection{原理}
+
+
+\newpage
 \section{数值比较器}
 
+\subsection{逻辑功能}
+
+比较两个正数而确定其相对大小。
+
+\subsection{结构}
+
+7485
+
+\subsection{原理}
+
+
+\newpage
 \section{译码器}
 
+\subsection{逻辑功能}
+
+将 n 个输入变量变换为 $2^n$ 个输出函数，每个输出对应一个最小项。
+
+\subsection{结构}
+
+74138
+
+\subsection{原理}
+
+
+\newpage
 \section{多路选择器}
 
+\subsection{逻辑功能}
+
+多路输入，单路输出，从多个输入中选择一个信号输出。
+
+\subsection{结构}
+
+74153
+
+\subsection{原理}
+
+
+\newpage
 \section{计数器}
 
+\subsection{逻辑功能}
+
+对输入脉冲信号进行计数。
+
+\subsection{结构}
+
+分为同步，异步。
+
+74193
+
+\subsection{原理}
+
+
+\newpage
 \section{寄存器}
 
-\section{只读存储器}
+\subsection{逻辑功能}
 
-\section{可编程逻辑阵列}
+存放数据或运算结果，具有接收数据、储存数据或传入数据的功能。
 
-\section{可编程阵列逻辑}
+\subsection{结构}
 
-\section{通用阵列逻辑}
+74194
 
-\section{高密度可编程逻辑器件}
+\subsection{原理}
+
+
+\newpage
+\section{只读存储器（ROM）}
+
+\subsection{逻辑功能}
+
+只读不写的存储器，断电后依然保存数据。
+
+\subsection{结构}
+
+\subsection{原理}
+
+
+
+\newpage
+\section{可编程逻辑阵列（PLA）}
+
+\subsection{逻辑功能}
+
+解决 ROM 存在地址译码和储存单元必须一一对应而浪费空间的缺陷，“与”阵列、“或”阵列都可以编程。 
+
+\subsection{结构}
+
+\subsection{原理}
+
+
+\newpage
+\section{可编程阵列逻辑(PAL)}
+
+\subsection{逻辑功能}
+
+可编程逻辑阵列（PLA）的“与”阵列可编程，而“或”阵列固定。
+
+\subsection{结构}
+
+\subsection{原理}
+
+
+\newpage
+\section{通用阵列逻辑（GAL）}
+
+\subsection{功能}
+
+与 PAL 类似，但不采用熔丝 I/O，而是使用 OLMC，可以重复改写。
+
+改进：
+\begin{enumerate}
+    \item 采用 $E^2CMOS$ 功耗低，速度快，可以电擦写和反复编程
+    \item 输出结构配置了输出逻辑宏单元，可以编程选择输出组态
+    \item 有加密单元，防复制，增加保密性
+\end{enumerate}
+
+\subsection{结构}
+
+\subsection{原理}
+
+
+\newpage
+\section{高密度可编程逻辑器件（HDPLD）}
+
+\subsection{功能}
+
+EPLD,CPLD,FPGA
+
+\subsection{结构}
+
+\subsection{原理}
+
+
 
 \newpage
