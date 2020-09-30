@@ -30,7 +30,7 @@ JRE = JVM（虚拟机） + Java SE API 标准类库
 
 将%JAVA_HOME%添加到环境变量中去
 
-**测试**
+#### **测试**
 
 在 cmd 中 在 d:中调用 javac.exe 以及 java.exe.
 
@@ -38,45 +38,44 @@ JRE = JVM（虚拟机） + Java SE API 标准类库
 
 1. java 程序编写-编译-运行的过程
 
-- 编写： 将编写的 java 代码保存在以".java"结尾的源文件中
-- 编译：
+   - 编写： 将编写的 java 代码保存在以".java"结尾的源文件中
+   - 编译：
 
-  - cmd -> cd 找到.java 文件所在地址
-  - 用 javac 编译成字节码文件 **格式：** _`javac HelloWorld.java`_ 或者 _`javac helloworld（源文件名）.java`_
+     - cmd -> cd 找到.java 文件所在地址
+     - 用 javac 编译成字节码文件 **格式：** _`javac HelloWorld.java`_ 或者 _`javac helloworld（源文件名）.java`_
 
-- 运行： 使用 java.exe 命令解释运行字节码文件 **格式：** `java 类名`
+   - 运行： 使用 java.exe 命令解释运行字节码文件 **格式：** `java 类名`
 
-  **注：**
+   **注：**
 
-  1.  java 语言对于英文大小写敏感 [仅支持第一种写法] ；windows 系统对大小写不敏感 [可以支持第二种写法]
-  2.  编译的时候要写后缀 _`.java`_
+   1. java 语言对于英文大小写敏感 [仅支持第一种写法] ；windows 系统对大小写不敏感 [可以支持第二种写法]
+   2. 编译的时候要写后缀 _`.java`_
 
-2.
+2. 在一个 java 源文件中可以声明多个 class，但只能最多有个一个类声明为 public.**_且要求 public 的类的类名必须与源文件名相同_**
 
-在一个 java 源文件中可以声明多个 class，但只能最多有个一个类声明为 public.**_且要求 public 的类的类名必须与源文件名相同_**
-
-```java
-public class Hello{
-   public static void main(String[]args){
-      System.out.println("Hello,my world!!!")
+   ```java
+   public class Hello{
+      public static void main(String[]args){
+         System.out.println("Hello,my world!!!")
+      }
    }
-}
 
-class Person{
+   class Person{
 
-}
+   }
 
-class Animal{
+   class Animal{
 
-}
-```
+   }
+   ```
 
 3. 程序的入口是 main()方法。格式是固定的，其中只有 args 可以变化 args-arguments 变量名
+
 4. 输出语句：
 
-`System.out.println()` //先输出，后换行 ‘（）无参数->输出换行’
+   `System.out.println()` //先输出，后换行 ‘（）无参数->输 出换行’
 
-`System.out.print()` //仅输出，无换行
+   `System.out.print()` //仅输出，无换行
 
 5. 执行语句以；结束
 
