@@ -18,4 +18,8 @@
 
 ## TODO
 
-- Physics chapter3
+- Physics
+  - chapter3
+- OOP
+  - chapter5
+  - chapter6

@@ -1,8 +1,54 @@
 \chapter{操作符重载}
 \newpage
 
-\section{友元类}
-\section{友元函数}
+\section{基本操作符重载}
+
+可以重载的操作符：
+\begin{lstlisting}[frame=shadowbox]
+    new new[]   delete  delete[]
+    +   -   *   /   %   ^   &
+    |   ~   !   =   <   > 
+
+    +=  -=  *=  /=  %=  ^=  &= |=
+    <<  >>  <<= >>= ==  !=  <= >=
+
+    &&  ||  ++  --  ,   ->  ->*
+
+    () []
+\end{lstlisting}
+
+不能重载的操作符：
+\begin{lstlisting}[frame=shadowbox]
+    .   ::  .*  ?:  sizeof    
+\end{lstlisting}
+
+调用函数的对象是操作符重载函数的第一个参数，所以：
+\begin{enumerate}
+    \item 一元操作符不需要参数
+    \item 二元操作符需要一个参数
+\end{enumerate}
+
+\begin{lstlisting}[frame=shadowbox]
+    class C{
+        C operator+(const C&) const;
+    }
+    C C::operator+(const C& c) const{
+        //~~~
+        }
+\end{lstlisting}
+
+\subsection{操作符优先级和语法}
+
+重载不能改变操作符的优先级和语法。
+
+\section{顶层函数进行操作符重载}
+
+被重载的操作符：
+\begin{enumerate}
+    \item 类成员函数
+    \item \textbf{顶层函数}
+\end{enumerate}
+
 
 
 \newpage
