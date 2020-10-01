@@ -49,6 +49,207 @@
     \item \textbf{顶层函数}
 \end{enumerate}
 
+以顶层函数的形式重载操作符时，二元操作符重载函数必须有两个参数，一元操作符重载必须有一个参数。
 
+顶层函数实现时，不能直接调用类里面的私有成员，改进的方式是把顶层函数设为该类的友元函数。
+
+使用顶层函数，非对象操作数可以出现在操作符的左边，而使用成员函数时，第一个操作数必须是类的对象。
+
+\begin{lstlisting}[frame=shadowbox] 
+    int main()
+    {
+        complex c1, c2(15.5, 23.1);
+        c1 = c2 + 13.5;
+        c1 = 13.5 + c2; // 用成员函数重载会报错
+        return 0;
+    }
+\end{lstlisting}
+
+\newpage
+
+成员函数重载：
+\begin{lstlisting}[frame=shadowbox]
+    class complex
+    {
+    public:
+        complex();
+        complex(double a);
+        complex(double a, double b);
+        complex operator+(const complex & A)const;
+        complex operator-(const complex & A)const;
+        complex operator*(const complex & A)const;
+        complex operator/(const complex & A)const;
+        void display()const;
+    private:
+        double real;   //复数的实部
+        double imag;   //复数的虚部
+    };
+
+    //~~~
+    
+    //重载加法操作符
+    complex complex::operator+(const complex & A)const
+    {
+        complex B;
+        B.real = real + A.real;
+        B.imag = imag + A.imag;
+        return B;
+    }
+\end{lstlisting}
+
+\newpage
+
+顶层函数重载：
+\begin{lstlisting}[frame=shadowbox]
+    class complex
+    {
+    public:
+        complex();
+        complex(double a);
+        complex(double a, double b);
+        double getreal() const { return real; }
+        double getimag() const { return imag; }
+        void setreal(double a){ real = a; }
+        void setimag(double b){ imag = b; }
+        void display()const;
+    private:
+        double real;   //复数的实部
+        double imag;   //复数的虚部
+    };
+
+    //~~~
+    
+    //重载加法操作符
+    complex operator+(const complex & A, const complex &B)
+    {
+        complex C;
+        C.setreal(A.getreal() + B.getreal());
+        C.setimag(A.getimag() + B.getimag());
+        return C;
+    }
+\end{lstlisting}
+
+\newpage
+
+以类成员函数的形式进行操作符重载，操作符左侧的操作数必须为类对象；而以顶层函数的形式进行操作符重载，
+只要类中定义了相应的转型构造函数，操作符左侧或右侧的操作数均可以不是类对象，但其中必须至少有一个类对象，
+否则调用的就是系统内建的操作符而非自己定义的操作符重载函数。
+
+\newpage
+
+友元函数重载：
+\begin{lstlisting}[frame=shadowbox]
+    class complex
+    {
+    public:
+        complex();
+        complex(double a);
+        complex(double a, double b);
+        friend complex operator+(const complex & A, const complex & B);
+        friend complex operator-(const complex & A, const complex & B);
+        friend complex operator*(const complex & A, const complex & B);
+        friend complex operator/(const complex & A, const complex & B);
+        void display()const;
+    private:
+        double real;   //复数的实部
+        double imag;   //复数的虚部
+    };
+
+    //重载加法操作符
+    complex operator+(const complex & A, const complex &B)
+    {
+        complex C;
+        C.real = A.real + B.real;
+        C.imag = A.imag + B.imag;
+        return C;
+    }
+\end{lstlisting}
+
+\newpage
+
+采用友元函数的形式进行操作符重载，如此实现既能继承操作符重载函数是顶层函数的优势，同时又能够使操作符重载函数实现起来更简单。
+
+\newpage
+
+\section{输入输出操作符的重载}
+
+$>>$ 的第一个操作数是系统类的对象，而重载函数是以类成员函数的形式实现的。
+为了不对系统类的源码进行修改，只能将 $>>$ 重载函数设计为顶层函数。
+
+\section{赋值运算符重载}
+
+拷贝构造函数和赋值操作符（=），都用来拷贝一个类的对象给另一个同类型的对象。
+拷贝构造函数将一个对象拷贝到另一个\textbf{新}的对象，赋值操作符将一个对象拷贝到另一个\textbf{已存在}的对象。
+编译器会自动生成拷贝构造函数和赋值运算符，但也可能会出现相应的问题。
+可以使用私有成员函数来让拷贝构造函数和赋值操作符函数共享复制的功能。
+
+\newpage
+
+\section{特殊操作符重载}
+
+\subsection{下标操作符重载}
+
+只能以成员函数形式重载。
+
+可以修改对象：
+\begin{lstlisting}[frame=shadowbox]
+    returntype& operator[] (paramtype);
+\end{lstlisting}
+
+可以访问对象但不能修改：
+\begin{lstlisting}[frame=shadowbox]
+    const returntype& operator[] (paramtype);
+\end{lstlisting}
+
+\subsection{函数调用操作符重载}
+
+语法：
+\begin{lstlisting}[frame=shadowbox]
+    returntype operator() (paramtype);
+\end{lstlisting}
+
+效果：
+\begin{lstlisting}[frame=shadowbox]
+    c(x,name); \\ 将被翻译为：
+    c.operator()(x,name);
+\end{lstlisting}
+
+\subsection{自增自减操作符重载}
+
+重载内容：
+\begin{enumerate}
+    \item 前置自增
+    \item 后置自增
+    \item 前置自减
+    \item 后置自减
+\end{enumerate}
+
+前置自增：
+\begin{lstlisting}[frame=shadowbox]
+    C operator++(); // ++c
+\end{lstlisting}
+
+后置自增：
+\begin{lstlisting}[frame=shadowbox]
+    C operator++ (int); // c++
+\end{lstlisting}
+
+其中后置的 int 无实际意义，仅用来区分。
+
+\subsection{转型操作符重载}
+
+\begin{lstlisting}[frame=shadowbox]
+    operator othertype();
+\end{lstlisting}
+
+\newpage
+
+\section{内存管理操作符}
+
+内存管理操作符 new,new[],delete,delete[]，可以用成员函数也可以用顶层函数重载。
+
+new,new[] 操作符重载函数的第一个操作必须是 size\_t 类型（数值等于将被创建的对象的大小总和）。
+
+delete,delete[] 操作符重载函数的第一个参数必须是 void* 类型的，返回类型必须是 void。
 
 \newpage
