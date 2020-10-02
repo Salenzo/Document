@@ -15,10 +15,6 @@
 ## Contributors
 
 - Akhia
+- Cetacean
 
 ## TODO
-
-- Physics
-  - chapter3
-- OOP
-  - chapter6
