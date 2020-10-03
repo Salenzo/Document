@@ -5,7 +5,7 @@
 
 \begin{table}[!htbp]
     \centering
-    \begin{tabular}{l|c|c}
+    \begin{tabular}{lcc}
         \toprule
                  & 能量交换 & 物质交换 \\
         \midrule
@@ -26,23 +26,36 @@
 
 \section{理想气体物态方程}
 
-$1\,\mathrm{atm}=1.013\times10^5$
-
-$mathrm{Pa}=760mmHg\\T=t+273.15$
+单位换算：
+\begin{equation}
+    \begin{aligned}
+        1\,\mathrm{atm} & =1.013\times10^5 \\
+        \mathrm{Pa}     & =760mmHg         \\
+        T               & =t+273.15
+    \end{aligned}
+\end{equation}
 
 \begin{enumerate}
     \item 波义耳定律(T)
-          $p_1V_1=p_2V_2$
+          \begin{equation}
+              p_1V_1=p_2V_2
+          \end{equation}
     \item 盖$\cdot$吕萨克定律(P)
-          $\frac{V_1}{T_1}=\frac{V_2}{T_2}$
+          \begin{equation}
+              \frac{V_1}{T_1}=\frac{V_2}{T_2}
+          \end{equation}
     \item 查理定律(V)
-          $\frac{p_1}{T_2}=\frac{p_2}{T_2}$
+          \begin{equation}
+              \frac{p_1}{T_2}=\frac{p_2}{T_2}
+          \end{equation}
 \end{enumerate}
 
 理想气体物态方程：
 
 \begin{equation}
-    pV=\frac{m'}{\mu}RT\hspace{10ex}m'=Nm ,~ \mu=N_Am
+    \begin{aligned}
+        pV=\frac{m'}{\mu}RT\hspace{10ex}m'=Nm , & \mu=N_Am
+    \end{aligned}
 \end{equation}
 
 理想气体压强公式：
@@ -51,23 +64,46 @@ $mathrm{Pa}=760mmHg\\T=t+273.15$
     \overline{v^2}=\frac{v_1^2+\ldots+V_n^2}{N}=\frac{1}{N}\sum_{i=1}^{N}{v_i^2}
 \end{equation}
 
-$pV=\frac{m}{M_\mathrm{mol}}RT=\nu{}RT$
+\begin{equation}
+    pV=\frac{m}{M_\mathrm{mol}}RT=\nu{}RT
+\end{equation}
 
-$m：气体质量(kg)\\M_\mathrm{mol}：气体摩尔质量\\R：气体普适常量\\\nu：摩尔数$
+\begin{enumerate}
+    \item $\mathrm{m}(g):\text{气体质量}$
+    \item $M_\mathrm{mol}(g/mol):\text{气体摩尔质量}$
+    \item $R:\text{气体普适常量}$
+    \item $\nu:\text{摩尔数}$
+\end{enumerate}
 
 理想气体常数：
 
-$p(atm),V(L),T(K)\Rightarrow R=8.2\times 10^{-2}atm\cdot L/(mol\cdot K)\\p(atm),V(m^3),T(K)\Rightarrow R=8.31 J/(mol\cdot K)$
+\begin{equation}
+    \begin{aligned}
+         & p(atm),  V(L),   & T(K) & \Rightarrow R=8.2\times 10^{-2}atm\cdot L/(mol\cdot K) \\
+         & p(atm),  V(m^3), & T(K) & \Rightarrow R=8.31 J/(mol\cdot K)
+    \end{aligned}
+\end{equation}
 
-玻尔兹曼常数： $k=\frac{R}{N_A}$
 
-$p=nkT \\ p=\frac{2}{3}n \overline{\varepsilon_k}\\\overline{\varepsilon_k}=\frac{1}{2}m\overline{v}^2=\frac{3}{2}kT$
+玻尔兹曼常数：
+
+\begin{equation}
+    k=\frac{R}{N_A}
+\end{equation}
+
+\begin{equation}
+    \begin{aligned}
+        p                        & =nkT                                      \\
+        p                        & =\frac{2}{3}n \overline{\varepsilon_k}    \\
+        \overline{\varepsilon_k} & =\frac{1}{2}m\overline{v}^2=\frac{3}{2}kT
+    \end{aligned}
+\end{equation}
 
 \section{能量均分定理}
 
 \begin{table}[!htbp]
     \centering
-    \begin{tabular}{l|c}
+    \begin{tabular}{lc}
         \toprule
                  & 自由度($\frac{1}{2}kT$/自由度) \\
         \midrule
@@ -122,13 +158,16 @@ $p=nkT \\ p=\frac{2}{3}n \overline{\varepsilon_k}\\\overline{\varepsilon_k}=\fra
 
 \end{enumerate}
 
-比较：$v_p<\overline{v}<\sqrt{\overline{v}^2}$
+比较：
+\begin{equation}
+    v_p<\overline{v}<\sqrt{\overline{v}^2}
+\end{equation}
 
 归一化条件：
 \begin{equation}
     \begin{aligned}
-        & \int^{0}_{\infty}{f(v)dv}=1 \\
-        & dS=f(v)dv=\frac{dN}{N}
+         & \int^{0}_{\infty}{f(v)dv}=1 \\
+         & dS=f(v)dv=\frac{dN}{N}
     \end{aligned}
 \end{equation}
 
