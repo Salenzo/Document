@@ -54,11 +54,12 @@
 
 \subsection{波动几何描述}
 
-波线：
-波面:
-
-平面波：
-球面波：
+\begin{enumerate}
+    \item 波线
+    \item 波面
+    \item 平面波
+    \item 球面波
+\end{enumerate}
 
 \section{惠更斯原理}
 
@@ -81,7 +82,7 @@
 \begin{equation}
     \begin{aligned}
         \delta{}  & =r_2-r_1=d\sin{\theta}\approx{d\tan{\theta}}                          \\
-                  & =\frac{xd}{D}=k\lambda{}                                              \\
+        & =\frac{xd}{D}=k\lambda{}                                              \\
         x         & =k\frac{D\lambda}{d}                         & k=0,\pm{1},\pm{2}\dots \\
         \Delta{x} & =\frac{D\lambda}{d}
     \end{aligned}
@@ -120,4 +121,48 @@ $r_2=(r_1-d)+nd$
 
 \section{薄膜干涉}
 
-分振幅法原理
+当光从折射率小的光疏介质，正入射或掠入射于折射率大的光密介质时，则反射光有半波损失。
+当光从折射率大的光密介质，正入射于折射率小的光疏介质时，反射光没有半波损失。
+折射光没有相位突变。
+
+若厚度 $e$ 一定，则相同入射角入射的光束，经膜的上下表面反射后产生的相干光束都有相同的光程差，
+从而对应于干涉图样中的一条条纹，此称干涉为\textbf{等倾干涉}（不要求）
+若入射角 i 一定，则称此干涉为\textbf{等厚干涉}（重点）
+薄膜厚度在 $10^{-7}m$ 数量级。
+
+相位相差了 $\pi$ 相当于波程差了 $\frac{\lambda}{2}$，称为半波损失。
+
+\begin{equation}
+    \delta=\delta_0+\delta{}'=2\mathrm{e}\sqrt{n_2^2-n_1^2\sin^2{i}}+
+    \left\{
+        \begin{aligned}
+            & \frac{\lambda}{2} & \mbox{反射条件不同} \\
+            & 0                 & \mbox{反射条件相同}
+        \end{aligned}
+        \right.
+    \end{equation}
+    
+    明文暗纹：
+\begin{equation}
+    \delta_{r}=
+    \left\{
+    \begin{aligned}
+        \mathrm{k}\lambda{}             ~~ & (k=1,2,3\dots) \\
+        \frac{2\mathrm{k}+1}{2}\lambda{}~~ & (k=0,1,2\dots)
+    \end{aligned}
+    \right.
+\end{equation}
+
+$k$ 的取值要注意：如 $k=3$ 则表示明纹 3 条，暗纹 4 条。
+
+
+
+\subsection{薄膜干涉的应用}
+
+增透膜:现代光学仪器中，为了减少入射光能量，在仪器表面上反射时所引起的损失，常在仪器表面上镀一层厚度均匀的薄膜。
+
+\section{等厚干涉}
+
+\subsection{劈尖干涉}
+
+\subsection{牛顿环}
