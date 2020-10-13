@@ -82,7 +82,7 @@
 \begin{equation}
     \begin{aligned}
         \delta{}  & =r_2-r_1=d\sin{\theta}\approx{d\tan{\theta}}                          \\
-        & =\frac{xd}{D}=k\lambda{}                                              \\
+                  & =\frac{xd}{D}=k\lambda{}                                              \\
         x         & =k\frac{D\lambda}{d}                         & k=0,\pm{1},\pm{2}\dots \\
         \Delta{x} & =\frac{D\lambda}{d}
     \end{aligned}
@@ -135,14 +135,14 @@ $r_2=(r_1-d)+nd$
 \begin{equation}
     \delta=\delta_0+\delta{}'=2\mathrm{e}\sqrt{n_2^2-n_1^2\sin^2{i}}+
     \left\{
-        \begin{aligned}
-            & \frac{\lambda}{2} & \mbox{反射条件不同} \\
-            & 0                 & \mbox{反射条件相同}
-        \end{aligned}
-        \right.
-    \end{equation}
-    
-    明文暗纹：
+    \begin{aligned}
+         & \frac{\lambda}{2} & \mbox{反射条件不同} \\
+         & 0                 & \mbox{反射条件相同}
+    \end{aligned}
+    \right.
+\end{equation}
+
+明文暗纹：
 \begin{equation}
     \delta_{r}=
     \left\{
@@ -164,5 +164,43 @@ $k$ 的取值要注意：如 $k=3$ 则表示明纹 3 条，暗纹 4 条。
 \section{等厚干涉}
 
 \subsection{劈尖干涉}
+
+$\theta{}\approx{}10^{-4}\sim{}10^{-5} \mathrm{rad}$
+
+\begin{equation}
+    \delta=2e+\frac{\lambda}{2}=
+    \left\{
+    \begin{aligned}
+        k\lambda{}              & , & k=1,2,3,\dots \\
+        \frac{2k+1}{2}\lambda{} & , & k=0,1,2,\dots
+    \end{aligned}
+    \right.
+\end{equation}
+
+$e=0$ 时是暗纹，证明了半波损失的存在。
+
+\subsubsection{条纹与厚度关系}
+
+相邻两条明纹暗纹间的厚度差：
+\begin{equation}
+    \begin{aligned}
+        2\mathrm{e_k}     & +\frac{\lambda}{2}=  k\lambda     \\
+        2\mathrm{e_{k+1}} & +\frac{\lambda}{2}=  (k+1)\lambda 
+    \end{aligned}\\
+\mbox{条纹间距：} \mathrm{e_{k+1}}-\mathrm{e_{k}}=\frac{\lambda}{2}
+\end{equation}
+
+\subsubsection{干涉条纹移动}
+
+\begin{enumerate}
+    \item $e$ 变大，条纹下移
+    \item $e$ 变小，条纹上移
+\end{enumerate}
+
+\subsubsection{劈尖干涉的应用}
+
+测膜厚：$e=k\frac{\lambda}{2n}~~~k=\underline{0},1,2,3,\dots$
+
+检验光学元件平整度
 
 \subsection{牛顿环}
