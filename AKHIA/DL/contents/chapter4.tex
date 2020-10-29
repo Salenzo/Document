@@ -82,6 +82,10 @@
 
 空翻现象：由于时钟信号宽度而多次翻转，可由主从触发器(串联)解决。
 
+\begin{equation}
+    Q^{(n+1)}=S+\overline{R}Q~(RS=0)
+\end{equation}
+
 \newpage
 
 \subsection{D 触发器}
@@ -93,13 +97,25 @@
     \item 输入信号转换为互补信号
 \end{enumerate}
 
+\begin{equation}
+    Q^{(n+1)}=D
+\end{equation}
+
 \subsection{J-K 触发器}
 
 为了解决 R-S 触发器输入同为 1 时触发器状态不确定问题，同时使触发器有两个输入端。
 
+\begin{equation}
+    Q^{(n+1)}=J\overline{Q}+\overline{K}Q
+\end{equation}
+
 \subsection{T 触发器}
 
 JK 端合并为 T 端。
+
+\begin{equation}
+    Q^{(n+1)}=T\overline{Q}+\overline{T}Q
+\end{equation}
 
 \newpage
 
