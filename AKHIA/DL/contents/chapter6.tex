@@ -13,9 +13,6 @@
 
 74283
 
-\subsection{原理}
-
-
 \newpage
 \section{数值比较器}
 
@@ -26,9 +23,6 @@
 \subsection{结构}
 
 7485
-
-\subsection{原理}
-
 
 \newpage
 \section{译码器}
@@ -43,19 +37,35 @@
 
 \subsection{原理}
 
+输入所有变量，展开函数到最小项，最小项化为输出的反。
+
+\begin{equation}
+    \begin{aligned}
+        Y & = \Sigma_m{0,2,4,6,7}
+          & =m_7+m_6+m_4+m_2+m_0                                                         \\
+          & = \overline{Y_7}+\overline{Y_6}+\overline{Y_4}+\overline{Y_2}+\overline{Y_0} \\
+          & = \overline{Y_0Y_2Y_4Y_6Y_7}
+    \end{aligned}
+\end{equation}
+
 
 \newpage
+
 \section{多路选择器}
 
 \subsection{逻辑功能}
 
 多路输入，单路输出，从多个输入中选择一个信号输出。
 
+一个多路选择器只能实现一个逻辑函数。
+
 \subsection{结构}
 
 74153
 
 \subsection{原理}
+
+使能端对应各变量，输入端和卡诺图中一一对应。
 
 
 \newpage
@@ -106,7 +116,7 @@
 
 \subsection{逻辑功能}
 
-解决 ROM 存在地址译码和储存单元必须一一对应而浪费空间的缺陷，“与”阵列、“或”阵列都可以编程。 
+解决 ROM 存在地址译码和储存单元必须一一对应而浪费空间的缺陷，“与”阵列、“或”阵列都可以编程。
 
 \subsection{结构}
 
