@@ -73,7 +73,7 @@ JRE = JVM（虚拟机） + Java SE API 标准类库
 
 4. 输出语句：
 
-   `System.out.println()` //先输出，后换行; 无参数->输 出换行
+   `System.out.println()` //先输出，后换行; 无参数->输出换行
 
    `System.out.print()` //仅输出，无换行
 
