@@ -54,17 +54,17 @@ JRE = JVM（虚拟机） + Java SE API 标准类库
 2. 在一个 java 源文件中可以声明多个 class，但只能最多有个一个类声明为 public.**_且要求 public 的类的类名必须与源文件名相同_**
 
    ```java
-   public class Hello{
-      public static void main(String[]args){
+   public class Hello {
+      public static void main(String[]args) {
          System.out.println("Hello,my world!!!")
       }
    }
 
-   class Person{
+   class Person {
 
    }
 
-   class Animal{
+   class Animal {
 
    }
    ```
