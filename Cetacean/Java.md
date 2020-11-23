@@ -40,7 +40,7 @@ JRE = JVM（虚拟机） + Java SE API 标准类库
 
    - 编写： 将编写的 java 代码保存在以".java"结尾的源文件中
    - 编译：
-
+ 
      - cmd -> cd 找到.java 文件所在地址
      - 用 javac 编译成字节码文件 **格式：** _`javac HelloWorld.java`_ 或者 _`javac helloworld（源文件名）.java`_
 
@@ -73,11 +73,11 @@ JRE = JVM（虚拟机） + Java SE API 标准类库
 
 4. 输出语句：
 
-   `System.out.println()` //先输出，后换行 ‘（）无参数->输 出换行’
+   `System.out.println()` //先输出，后换行; 无参数->输 出换行’
 
    `System.out.print()` //仅输出，无换行
 
-5. 执行语句以；结束
+5. 执行语句以 `;` 结束
 
 6. 编译后会生成一个或多个字节码文件，运行包含主函数的文件
 
