@@ -1,0 +1,1031 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{xeCJK}
+\end_preamble
+\use_default_options true
+\begin_modules
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a5paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification false
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.5cm
+\topmargin 1.5cm
+\rightmargin 0cm
+\bottommargin 1.5cm
+\secnumdepth -2
+\tocdepth -2
+\paragraph_separation indent
+\paragraph_indentation 0pt
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+everymath={
+\backslash
+displaystyle}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+lineskip=
+\backslash
+jot
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+lineskiplimit=
+\backslash
+lineskip
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+substack[1]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+left
+\backslash
+{%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+begin{array}{l}
+\backslash
+relax%
+\end_layout
+
+\begin_layout Plain Layout
+
+			#1%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+end{array}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+right.^{
+\backslash
+mathstrut}_{
+\backslash
+mathstrut}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+arraycolsep{0pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+导论
+\end_layout
+
+\begin_layout Subsection
+马克思主义
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{含义}\substack{\text{关于自然、社会、人类思维发展}\\
+\text{社会主义代替资本主义，实现共产主义}\\
+\text{无产阶级、全人类、个人自由的解放}
+}
+\\
+\text{组成部分}\substack{\text{马克思主义哲学}\\
+\text{马克思主义政治经济学}\\
+\text{科学社会主义}
+}
+\\
+\text{理论来源}\substack{\text{德国古典哲学}\\
+\text{英国古典政治经济学}\\
+\text{英法空想社会主义}
+}
+\\
+\text{著作}\substack{\text{《德意志意识形态》——首次系统地阐述历史唯物主义}\\
+\text{《共产党宣言》——发表标志马克思主义公开问世}\\
+\text{《资本论》——系统阐述剩余价值学说}
+}
+\\
+\qquad\text{唯物史观、剩余价值学说——马克思的两个伟大发现}\\
+\text{鲜明特征}\substack{\text{科学性}\\
+\text{革命性}\\
+\text{实践性}\\
+\text{人民性}\\
+\text{发展性}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+世界的物质性及发展规律
+\end_layout
+
+\begin_layout Subsection
+物质及其存在形态
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{哲学}\substack{\text{含义：是系统化理论化的世界观}\\
+\text{基本问题：存在和思维的关系问题}\\
+\qquad\text{内容}\substack{\text{谁是本源}\left(\text{划分}\substack{\text{唯物主义}\\
+\text{唯心主义}
+}
+\right)\\
+\text{有无同一性}\left(\text{划分}\substack{\text{可知论}\\
+\text{不可知论}
+}
+\right)
+}
+}
+\\
+\text{物质}\substack{\text{含义：不依赖人的意识而存在并能为人类意识所反映的客观存在}\\
+\text{范畴：标志客观实在的哲学范畴}\\
+\text{根本属性：运动}
+}
+\\
+\text{社会生活}\substack{\text{本质：实践的}\\
+\text{含义：各种社会活动的总称}\\
+\text{实践性体现}\substack{\textcircled{1}\ \text{实践是社会关系形成基础，包含全部社会关系}\\
+\textcircled{2}\ \text{形成了社会物质、政治、精神生活领域}\\
+\textcircled{3}\ \text{构成社会发展动力，推动社会进步}
+}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+物质与意识
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{意识：人脑的机能和属性、客观世界的主观映像}\\
+\text{物质}\xrightleftharpoons[\text{反作用}]{\text{决定}}\text{意识}\\
+\text{客观规律性}\xrightleftharpoons[\text{正确认识利用}]{\text{前提}}\text{主观能动性}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+联系和发展
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{联系和发展的观点是唯物辩证法的总观点、总特征}\\
+\text{联系特点：客观性、普遍性、多样性、条件性}\\
+\text{发展}\substack{\text{特点：前进的、上升的运动}\\
+\text{实质：新事物产生、旧事物灭亡}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+对立统一规律
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{性质}\substack{\text{事物发展的根本规律}\\
+\text{唯物辩证法的实质与核心}
+}
+\\
+\text{揭示}\substack{\text{事物普遍联系、事物为什么会发展}\\
+\text{贯穿量质变、否定之否定规律、唯物辩证法}\\
+\text{提供矛盾分析法}\substack{\text{认识和改造世界的根本方法}\\
+\text{核心要求：善于分析矛盾特殊性，}\\
+\text{　　　　　具体联系具体分析，}\\
+\text{　　　　　具体情况具体分析}
+}
+}
+\\
+\text{矛盾}\substack{\substack{\text{统一性：相互依存，相互贯通，相互转化}\\
+\text{斗争性：相互排斥、分离}
+}
+\\
+\text{（特殊形式：和谐）}\\
+\substack{\text{普遍性}\\
+\text{斗争性}
+}
+\text{辩证统一}\\
+\substack{\text{主要矛盾和次要矛盾}\\
+\text{矛盾的主要方面和次要方面}
+}
+\text{（辩证关系）坚持“两点论”“重点论”统一}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+量质变辩证关系
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{量为质的必要准备}\\
+\text{质为量的必然结果}\\
+\text{二者相互渗透}\substack{\text{量的过程局部质变}\\
+\text{质的过程量有变化}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+否定之否定规律
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{辩证否定观}\substack{\text{否定是事物的自我否定，是内部矛盾运动的结果}\\
+\text{否定是事物发展的环节，旧质}\to\text{新质；旧事物}\to\text{新事物}\\
+\text{否定是实物新旧联系的环节}\\
+\text{辩证否定实质为“扬弃”}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+实践与认识及其发展规律
+\end_layout
+
+\begin_layout Subsection
+实践与认识
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{实践}\substack{\text{含义：人类能动地改造世界的社会性物质活动}\\
+\text{特征}\substack{\text{直接现实性}\\
+\text{直觉能动性}\\
+\text{社会历史性}
+}
+\\
+\text{基本类型}\substack{\text{物质生产}\\
+\text{社会政治}\\
+\text{科学文化}
+}
+\\
+\text{在认识活动中的决定作用}\substack{\text{是认识的来源}\\
+\text{是认识的目的}\\
+\text{是认识发展动力}\\
+\text{检验认识真理性的唯一标准}
+}
+}
+\\
+\text{认识}\substack{\text{哲学问题}\substack{\text{唯物唯心对其本质不同回答}\\
+\text{否认认识是人脑对客观世界的反映是唯心主义先验论}
+}
+\\
+\text{辩证唯物主义认识论特点}\substack{\text{实践观点引入认识论}\\
+\text{辩证法应用于反映论考察认识}
+}
+\\
+\text{本质：主体在实践基础上对客体的能动反映}\\
+\text{不同阶段}\left\{ \begin{array}{c}
+\text{感性}\\
+\text{理性}
+\end{array}\right\} \text{辩证统一：感性}\xrightleftharpoons[\text{依赖于}]{\text{发展深化}}\text{理性——相互渗透、包含}
+}
+\\
+\text{二者辩证运动及规律：实践}\rightleftharpoons\text{认识，循环往复以致无穷}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+真理与价值
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{真理}\substack{\text{含义}\substack{\text{标志主观与客观相符合的哲学范畴}\\
+\text{对客观事物及规律的正确反映}
+}
+\\
+\text{客观性}\substack{\text{对客观事物及规律的正确反映}\\
+\text{包含着不依赖于人和意识的内容}
+}
+\\
+\text{真理问题上的唯物论：真理都是客观（的/真理）}\\
+\substack{\text{绝对性}\substack{\text{主客观符合}\\
+\text{人能获得正确认识（可知论）}
+}
+\\
+\text{相对性}\substack{\text{认识的限度}\\
+\text{事物的限度}
+}
+\\
+\text{二者辩证统一}
+}
+\\
+\text{检验标准：实践}\substack{\text{确定性：绝对性（唯一）}\\
+\text{不确定性：相对性（制约）}
+}
+}
+\\
+\text{价值：含义}\substack{\text{实践基础上主客体意义关系}\\
+\text{客体对人、群体、社会的积极意义}
+}
+\\
+\text{二者在实践中辩证统一}\substack{\text{成功的实践是真理尺度、价值尺度的统一}\\
+\text{合规律性和合目的性的统一}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+从实际出发、实事求是
+\end_layout
+
+\begin_layout Standard
+从实际出发：
+\begin_inset Formula $\substack{\text{把客观存在事物作为观察处理问题出发点}\\
+\text{马克思主帅成认识论根本要求、具体体现}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+实事求是：中国共产党思想路线的核心
+\end_layout
+
+\begin_layout Section
+人类社会及其发展规律
+\end_layout
+
+\begin_layout Subsection
+社会存在与社会意识
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{背景}\substack{\text{关系问题是社会历史观的基本问题}\\
+\text{唯心史观缺陷}\substack{\text{考察思想动机，忽略背后根源}\\
+\text{误作精神史观，不懂客观规律}
+}
+}
+\\
+\text{社会存在}\substack{\text{含义}\\
+\text{组成}\substack{\text{自然地理环境}\\
+\text{人口因素}\\
+\text{物质生产方式}\substack{\text{地位：社会历史发展决定力量}\\
+\text{意义}\substack{\text{社会存在基础、活动前提}\\
+\text{决定社会性质，制约生活}\\
+\text{决定社会变化、形态更替}
+}
+}
+}
+}
+\\
+\text{社会意识}\substack{\text{含义：社会生活的精神方面，社会存在的反映}\\
+\substack{\text{意识形态：政治法律思想、道德、艺术、宗教、哲学等}\\
+\text{非意识形态：自然科学和语言学、形式逻辑等}
+}
+}
+\\
+\text{二者关系：辩证统一：社会存在}\xrightleftharpoons[\text{反作用}]{\text{决定}}\text{社会意识（有相对独立性）}\\
+\text{文化对社会发展重要作用：思想保证、精神动力、凝聚力量、智力支持}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+生产力与生产关系
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{生产力}\substack{\text{含义}\\
+\text{基本要素：劳动资料、劳动对象、劳动者}
+}
+\\
+\text{生产关系}\substack{\text{含义}\\
+\text{包括：所有制、人与人、产品分配}
+}
+\\
+\text{二者联系：生产力}\xrightleftharpoons[\text{反作用}]{\text{决定}}\text{生产关系}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+经济基础与上层建筑
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{经济基础：含义（生产关系总和）}\\
+\text{上层建筑}\substack{\text{含义}\\
+\text{组成部分}\substack{\text{观念上层建筑}=\text{意识形态}\\
+\text{政治上层建筑}=\text{制度、设施、组织}
+}
+\\
+\text{主导地位：政治上层建筑}\\
+\text{核心：国家政权（国家的实质是一个阶级统治另一个阶级的工具）}
+}
+\\
+\text{二者联系：作用、反作用、矛盾运动、适合}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+社会形态更替
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{含义：（范畴、统一体）}\\
+\text{特性之人们的历史选择性}\substack{\text{社会发展提供基础}\\
+\text{主观能动性与客观规律性相统一}\\
+\text{归根结底是人民群众的选择性}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+社会基本矛盾作用
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{社会基本矛盾}\substack{\text{生产力与生产关系}\\
+\text{经济基础和上层建筑}
+}
+\\
+\begin{array}{c}
+\text{主要作用}\\
+\text{（根本动力）}
+\end{array}\substack{\text{生产力是动力因素 、进步决定力量}\\
+\text{社会基本矛盾特别是生产力和生产关系的矛盾决定其他矛盾}\\
+\text{矛盾形式和解决方式促进社会发展}
+}
+\\
+\text{社会主要矛盾}\substack{\text{转化（需要和落后社会}\to\text{需要和不平衡不充分的发展）}\\
+\text{转化依据}\substack{\text{需求增长}\\
+\text{发展不平衡}
+}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+阶级斗争和社会革命
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{阶级}\substack{\text{定义（列宁）：大的集团、不同的社会生产体系地位}\\
+\text{范畴：经济、历史}
+}
+\\
+\text{阶级斗争：社会发展的直接动力}\\
+\text{社会革命：基本矛盾运动结果 \& 社会发展重要动力}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+改革
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{中国社会主义改革、社会主义制度的自我完善与发展}}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+科学技术
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{影响}\substack{\text{生产方式}\\
+\text{生活方式}\\
+\text{思维方式}
+}
+\\
+\text{正确把握其社会作用}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+人民群众是历史的创造者
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{背景：两种历史观在创造者上队里（英雄史观抹杀人民群众历史作用）}\\
+\text{人民群众决定作用}\substack{\text{社会物质财富}\\
+\text{社会精神财富}\\
+\text{社会变革决定力量}
+}
+\\
+\text{党中央：以人民为中心}\\
+\text{无产阶级政党的群众路线：生命线、根本工作路线}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+资本主义的本质及规律
+\end_layout
+
+\begin_layout Subsection
+商品经济
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{发展：简单}\to\text{发达}\\
+\text{历史：自然经济（自给自足）发展而来}\\
+\text{历史条件}\substack{\text{存在社会分工}\\
+\text{生产资料和劳动产品属于不同所有者}
+}
+\\
+\text{含义：以交换为目的进行生产的经济形势}\\
+\text{商品}\substack{\text{含义：用来交换、满足需要、劳动产品}\\
+\text{二因素/二属性：价值与使用价值（矛盾统一体）}\\
+\substack{\text{价值}\substack{\text{含义：无差别的一般人类劳动，脑力、体力}\\
+\text{性质：是商品特有的社会属性}
+}
+\\
+\text{使用价值}\substack{\text{含义：满足需要的有用性}\\
+\text{性质：是商品的自然属性（一切产品共有属性）}\\
+\text{地位：交换价值的物质承担者}
+}
+\\
+\text{二者对立统一}\substack{\text{对立：相互排斥不可兼得}\\
+\text{统一：都是商品的二因素}
+}
+\text{价值}\xrightleftharpoons[\text{物质承担者}]{\text{寓于}}\text{使用价值}
+}
+}
+\\
+\begin{array}{c}
+\Uparrow{\scriptstyle \text{决定商品二重性}}\\
+\text{劳动二重性}\\
+\\
+\end{array}\substack{\text{具体劳动}\substack{\text{具体形式的劳动}\\
+\text{创造使用价值}
+}
+\\
+\text{抽象劳动}\substack{\text{脑力体力耗费}\\
+\text{形成商品价值}
+}
+\\
+\text{二者对立统一}\substack{\text{统一：同一劳动过程}\\
+\text{对立}\substack{\text{具体劳动：自然属性，人与自然}\\
+\text{抽象劳动：社会属性，人与社会}
+}
+}
+}
+\\
+\text{商品价值量}\substack{\text{商品的价值包括质和量}\\
+\text{社会必要劳动时间}\substack{\text{含义}\\
+\text{规律}\substack{\text{生产率水平}\uparrow\\
+\qquad\Rightarrow\text{商品数量}\uparrow\\
+\qquad\Rightarrow\text{社会必要劳动时间}\downarrow\\
+\qquad\Rightarrow\text{单位商品价值量}\downarrow
+}
+}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+价值规律
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{含义：生产和交换的基本规律}\\
+\text{主要内容：商品的价值量由生产商品的社会必要劳动时间决定}\\
+\text{客观要求：商品交换以价值量为基础、等价交换}\\
+\text{意义：贯穿商品经济全过程，支配生产和流通}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+以私有制为基础的商品经济基本矛盾
+\end_layout
+
+\begin_layout Standard
+构成因素
+\begin_inset Formula $\substack{\text{私人劳动}\\
+\text{社会劳动}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+资本主义经济
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{资本的原始积累：生产者与生产资料分离，资本集中在少数人手上，}\\
+\text{　　　　　　　　资本主义得以迅速发展}\\
+\text{劳动力}\substack{\text{劳动力成为商品与货币转化资本}\\
+\qquad\text{具备条件}\substack{\text{自由人、支配劳动力}\\
+\text{自由得一无所有，无劳动力实现的物质条件}
+}
+\\
+\text{包含}\substack{\text{价值}\substack{\text{本人生存生活资料}\\
+\text{家属生存生活资料}\\
+\text{接受教育和训练的支出}
+}
+\\
+\text{使用价值是价值的源泉，在消费过程中创造新的价值}
+}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+生产剩余价值
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{资本主义生产过程的两重性}\substack{\text{生产物质资料的劳动过程}\\
+\text{生产剩余价值的过程（增值过程）}
+}
+\\
+\text{内涵}\substack{\text{资本主义生产过程的主要方面}\\
+\text{是超过劳动力价值补偿的一定点而延长了价值的过程}
+}
+\\
+\text{资本}\substack{\text{内涵}\substack{\text{是能够带来剩余价值的价值}\\
+\text{不是物，是一定的、社会的、属于一定历史社会形态的生产关系}
+}
+\\
+\text{包括}\substack{\text{不变资本：以生产资料形态存在}\\
+\text{可变资本：购买劳动力的资本}
+}
+}
+\\
+\text{剩余价值生产基本方法}\substack{\text{绝对剩余价值生产：延长工作日和提高强度}\\
+\text{相对剩余价值生产：缩短必要劳动时间，}\\
+\text{　　　　　　　　　延长剩余劳动时间}
+}
+\\
+\text{资本积累}\substack{\text{含义：剩余价值的资本化}\\
+\text{（书本理解…）}\\
+\text{本质：不断利用无偿工人剩余价值扩大资本规模，加强剥削与统治}\\
+\text{源泉：剩余价值}\\
+\text{影响}\substack{\text{财富两极分化}\\
+\text{失业严重}
+}
+\\
+\text{资本技术构成（生产水平）}\xrightleftharpoons[\text{反映}]{\text{决定}}\text{价值构成}\\
+\text{资本的有机构成}\substack{\text{含义}\nearrow\\
+\text{表达式：}c:v\text{ （\ensuremath{c}为不变资本，\ensuremath{v}为可变资本）}
+}
+}
+\\
+\text{社会再生产的核心问题：社会总产品的实现问题}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+资本主义矛盾与经济危机
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{基本矛盾：生产社会化与生产资料资本主义私人占有之间的矛盾}\\
+\text{经济危机}\substack{\text{根源：资本主义的基本矛盾}\\
+\quad\mathclap{\Downarrow}\\
+\text{具体表现}\substack{\text{生产无限扩大与劳动人民有支付能力需求缩小}\\
+\text{单个企业生产有组织性欲整个社会生产无政府状态}
+}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+资本主义的发展及其趋势
+\end_layout
+
+\begin_layout Subsection
+垄断资本主义
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{形成}\substack{\text{概况}\substack{\text{十九世纪七十年代前：自由竞争}\\
+\text{十九世纪七十年代开始：自由竞争向垄断资本主义过渡}\\
+\text{十九世纪末二十世纪初：垄断替代自由竞争占据统治地位}
+}
+\\
+\text{垄断：少数资本大企业为了获取高额利润，}\\
+\text{　　　相互协议联合操纵控制商品的生产、销售、价格}\\
+\substack{\text{金融资本：工业垄断资本与银行垄断资本相融合}\\
+\text{金融寡头：操纵国民经济命脉、控制国家政权的垄断资本家}
+}
+}
+\\
+\text{发展}\substack{\text{国家垄断资本主义}\substack{\text{含义：国家政权与私人垄断融合}\\
+\text{作用：垄断资本主义新发展，经济发展积极作用}
+}
+\\
+\text{金融垄断资本}\substack{\text{背景：二十世纪七十年代初，布雷顿森林体系崩溃}\\
+\text{制度条件：金融自由化与金融创新}
+}
+}
+\\
+\text{实质（五个基本特征）}\substack{\text{在经济生活起决定作用}\\
+\text{在金融资本基础上形成金融寡头的统治}\\
+\text{资本输出有了重要意义}\\
+\text{形成瓜分世界的国际垄断资本家同盟}\\
+\text{最大资本主义大国已把世界瓜分完毕}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+经济全球化
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{表现}\substack{\text{国际分工进一步深化}\\
+\text{贸易全球化}\\
+\text{金融全球化}\\
+\text{企业生产经营全球化}
+}
+\\
+\text{对发展中国家积极作用表现}\substack{\text{先进技术、管理经验}\\
+\text{就业机会}\\
+\text{贸易发展}\\
+\text{跨国公司}
+}
+\\
+\text{双刃剑（负面影响）}\substack{\text{发达与发展中国家地位收益不平等、不平衡}\\
+\text{发展中国家资源短缺，环境恶化}\\
+\text{增加经济风险}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+二战后资本主义变化
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{表现}\substack{\text{生产资料所有制}\\
+\qquad\text{（私人资本所有制}\to\text{国家资本所有制、法人资本所有制）}\\
+\text{劳资关系和分配关系变化}\\
+\text{社会阶层和阶级结构变化}\\
+\text{经济调节机制和经济危机形态变化}\\
+\text{政治制度变化}
+}
+\\
+\text{理解}\substack{\text{这是客观事实，并由有助于把握资本主义经济发展趋势}\\
+\text{根本上是人类发展一般规律，是资本主义经济规律作用的结果}\\
+\text{资本注意经济生产关系根本性质并未改变}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+社会主义的发展及其规律
+\end_layout
+
+\begin_layout Subsection
+空想社会主义
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{空想社会主义是科学社会主义的理论来源}\\
+\text{《乌托邦》傅里叶、圣西门、欧文}\\
+\text{意义}\substack{\text{对资本主义旧制度的辛辣讽刺}\\
+\text{早期无产阶级意识与利益的新声反映了迫切要求改造现存社会，}\\
+\qquad\text{建立理想新社会的愿望}\\
+\text{提供启发工人觉悟的宝贵材料}
+}
+\\
+\text{局限}\substack{\text{没有指出社会发展的真正出路}\\
+\text{没有阐明资本主义雇佣制的本质}\\
+\text{没有发现资本主义发展规律}\\
+\text{没有找到成为新社会的创造者的社会力量}
+}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+共产主义崇高理想及其最终实现
+\end_layout
+
+\begin_layout Subsection
+共产主义社会基本特征
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\substack{\text{物质财富极大丰富，消费资料按需分配}\\
+\text{社会关系高度和谐，人们精神境界极大提高}\\
+\text{每个人自由而全面地发展，人类从必然王国向自由王国飞跃}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
