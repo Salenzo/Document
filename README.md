@@ -11,6 +11,7 @@
 - JP Janpanese
 - OOP Object-Oriented Programming
 - Physics
+- Marxism
 
 ## Contributors
 
