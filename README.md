@@ -12,6 +12,7 @@
 - OOP Object-Oriented Programming
 - Physics
 - Marxism
+- Maoism
 
 ## Contributors
 
