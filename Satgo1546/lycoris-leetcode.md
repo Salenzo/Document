@@ -1,4 +1,4 @@
-# 剑指Offer II
+# 题库随机，语言随机
 
 ## 原创思路
 
@@ -37,9 +37,6 @@
 ### 067 最大的异或
 二重二分法：先排序（O(n log n)），这样“寻找所有拥有指定前缀的数”的操作就加快到O(log n)。再按字典树的思路查找每个数对应的能使异或值最大的数，每个数要查找31次。
 
-- 时间复杂度：O(n log n log C)，其中n是数组nums的长度，C是数组中的元素范围。
-- 空间复杂度：O(log n)，其中n是数组nums的长度。空间复杂度主要取决于排序所需要的空间。
-
 ```python
 def findMaximumXOR(self, nums: List[int]) -> int:
     nums.sort()
@@ -50,7 +47,7 @@ def findMaximumXOR(self, nums: List[int]) -> int:
         hi = len(nums)
         # 最高位的二进制位编号为30
         for b in range(30, -1, -1):
-            mid = bisect.bisect_left(nums, y | 1 << b, lo=lo, hi=hi)
+            mid = bisect_left(nums, y | 1 << b, lo=lo, hi=hi)
             # 如果不存在当前位与nums[i]相反的数，那么只能相同了
             if mid == hi or mid != lo and nums[i] & 1 << b:
                 hi = mid
@@ -65,6 +62,26 @@ def findMaximumXOR(self, nums: List[int]) -> int:
                 break
     return ans
 ```
+
+- 时间复杂度：O(n log n log C)，其中n是数组nums的长度，C是数组中的元素范围。
+- 空间复杂度：O(log n)，其中n是数组nums的长度。空间复杂度主要取决于排序所需要的空间。
+
+### 085 生成匹配的括号
+棋盘格边上的递归：
+
+```python
+def generateParenthesis(self, n: int) -> List[str]:
+    def p(l, r):
+        if r == 0:
+            return ["(" * l]
+        if l < r:
+            return []
+        return [x + ")" for x in p(l, r - 1)] + [x + "(" for x in p(l - 1, r)]
+    return p(n, n)
+```
+
+- 时间复杂度：O(4<sup>n</sup>/n<sup>1/2</sup>)，该分析与官方题解类似。
+- 空间复杂度：O(4<sup>n</sup>/n<sup>1/2</sup>)，此方法除答案数组外，中间过程中会存储与答案数组同样数量级的临时数组，是我们所需要的空间复杂度。
 
 ## 一行代码赖皮过法
 
@@ -116,8 +133,28 @@ def findMaximumXOR(self, nums: List[int]) -> int:
       return sum(v for k, v in self.m.items() if k[:len(prefix)] == prefix)
   ```
 - 072 求平方根
+  ```lisp
+  (inexact->exact (floor (sqrt x)))
+  ```
+- 073 狒狒吃香蕉 ← 官方题解
   ```python
-  return int(math.sqrt(x))
+  return bisect_left(range(max(piles)), -h, 1, key=lambda k: -sum((pile + k - 1) // k for pile in piles))
+  ```
+- 076 数组中的第k大的数字
+  ```python
+  return heapq.nlargest(k, nums)[-1]
+  ```
+- 079 所有子集
+  ```python
+  return [[x for j, x in enumerate(nums) if i & 1 << j] for i in range(1 << len(nums))]
+  ```
+- 080 含有k个元素的组合
+  ```python
+  return list(itertools.combinations(range(1, n + 1), k))
+  ```
+- 083 没有重复元素集合的全排列
+  ```python
+  return list(itertools.permutations(nums))
   ```
 
 ## 很难绷得住
