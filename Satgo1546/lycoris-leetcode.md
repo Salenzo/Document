@@ -66,6 +66,19 @@ def findMaximumXOR(self, nums: List[int]) -> int:
 - 时间复杂度：O(n log n log C)，其中n是数组nums的长度，C是数组中的元素范围。
 - 空间复杂度：O(log n)，其中n是数组nums的长度。空间复杂度主要取决于排序所需要的空间。
 
+### 081 允许重复选择元素的组合
+没什么特别的，只是想让你们看看二重for循环list comprehension。
+
+```python
+def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+    x = candidates[-1]
+    if len(candidates) == 1:
+        return [] if target % x else [target // x * candidates]
+    if target == 0:
+        return [[]]
+    return [s + [x] * i for i in range(target // x + 1) for s in self.combinationSum(candidates[:-1], target - x * i)]
+```
+
 ### 085 生成匹配的括号
 棋盘格边上的递归：
 
@@ -82,6 +95,44 @@ def generateParenthesis(self, n: int) -> List[str]:
 
 - 时间复杂度：O(4<sup>n</sup>/n<sup>1/2</sup>)，该分析与官方题解类似。
 - 空间复杂度：O(4<sup>n</sup>/n<sup>1/2</sup>)，此方法除答案数组外，中间过程中会存储与答案数组同样数量级的临时数组，是我们所需要的空间复杂度。
+
+### 101 分割等和子集
+Pythonic动态规划变体：不用布尔数组，而是用集合。集合表示截止当前元素，通过选择可达的和。
+
+```python
+def canPartition(self, nums: List[int]) -> bool:
+    target = sum(nums)
+    if target % 2:
+        return False
+    target //= 2
+    m = {0}
+    for x in nums:
+        m |= {s + x for s in m if s + x <= target}
+        if target in m:
+            return True
+    return False
+```
+
+- 时间复杂度：O(n × target)，其中n是数组的长度，target是整个数组的元素和的一半。需要计算出所有的状态，每个状态在进行转移时的时间复杂度为O(1)。
+- 空间复杂度：O(target)，其中target是整个数组的元素和的一半。空间复杂度取决于`m`集合，其中最多有target + 1个元素。
+
+### 102 加减的目标值
+Pythonic动态规划变体：不用数组，而是用字典。键值对表示截止当前元素，加减能够达成指定值的不同表达式数目。
+
+```python
+def findTargetSumWays(self, nums: List[int], target: int) -> int:
+    m = {0: 1}
+    for x in nums:
+        m2 = defaultdict(int)
+        for s in m:
+            m2[s + x] += m[s]
+            m2[s - x] += m[s]
+        m = m2
+    return m[target]
+```
+
+- 时间复杂度：O(n×sum)，其中n是数组`nums`的长度，sum是数组`nums`的元素和。字典中最多存在sum个键，需要计算每个键的值。
+- 空间复杂度：O(sum)，其中sum是数组`nums`的元素和。空间复杂度取决于字典中键值对的数目。
 
 ## 一行代码赖皮过法
 
@@ -155,6 +206,38 @@ def generateParenthesis(self, n: int) -> List[str]:
 - 083 没有重复元素集合的全排列
   ```python
   return list(itertools.permutations(nums))
+  ```
+- 086 分割回文子字符串
+  ```python
+  return [[s[:i]] + t for i in range(1, len(s) + 1) if s[:i] == s[i-1::-1] for t in self.partition(s[i:])] if s else [[]]
+  ```
+- 088 爬楼梯的最少成本
+  ```python
+  return min(reduce(lambda s, x: (s[1], min(s) + x), cost, (0, 0)))
+  ```
+- 089 房屋偷盗
+  ```c
+  for (int a = 0, b = 0, c; ; a = b, b = c) if (c = fmax(a + nums[--numsSize], b), !numsSize) return c;
+  ```
+- 092 翻转字符
+  ```c
+  for(int a = 0, b = 0; ; ) if (*s - 48 ? a = fmin(a, b), b++: a++, !*s++) return a;
+  ```
+- 
+
+## 极致的优雅
+- 065 最短的单词编码 ← 官方题解
+  ```python
+  def minimumLengthEncoding(self, words: List[str]) -> int:
+      # 删除重复元素
+      words = list(set(words))
+      # 字典项不存在时自动再创建一个defaultdict
+      Trie = lambda: collections.defaultdict(Trie)
+      trie = Trie()
+      # reduce(dict.__getitem__, S, trie)表示trie[S[0]][S[1]][S[2]][...][S[len(S) - 1]]
+      nodes = [reduce(dict.__getitem__, word[::-1], trie) for word in words]
+      # 没有相邻项的节点即是答案
+      return sum(len(word) + 1 for i, word in enumerate(words) if len(nodes[i]) == 0)
   ```
 
 ## 很难绷得住
