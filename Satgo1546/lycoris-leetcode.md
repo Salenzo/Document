@@ -131,7 +131,7 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
     return m[target]
 ```
 
-- 时间复杂度：O(n×sum)，其中n是数组`nums`的长度，sum是数组`nums`的元素和。字典中最多存在sum个键，需要计算每个键的值。
+- 时间复杂度：O(n × sum)，其中n是数组`nums`的长度，sum是数组`nums`的元素和。字典中最多存在sum × 2 + 1个键，需要计算每个键的值。
 - 空间复杂度：O(sum)，其中sum是数组`nums`的元素和。空间复杂度取决于字典中键值对的数目。
 
 ## 一行代码赖皮过法
