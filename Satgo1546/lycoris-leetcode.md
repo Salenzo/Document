@@ -184,7 +184,7 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
       return sum(v for k, v in self.m.items() if k[:len(prefix)] == prefix)
   ```
 - 072 求平方根
-  ```lisp
+  ```scheme
   (inexact->exact (floor (sqrt x)))
   ```
 - 073 狒狒吃香蕉 ← 官方题解
@@ -223,7 +223,18 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
   ```c
   for (int a = 0, b = 0; ; ) if (*s - 48 ? a = fmin(a, b), b++: a++, !*s++) return a;
   ```
-- 
+- 098 路径的数目
+  ```ruby
+  (3..(m + n)).to_a.combination(m - 1).size
+  ```
+- 100 三角形中最小路径之和
+  ```ruby
+  triangle.reverse.reduce { |s, x| s.each_cons(2).map(&:min).zip(x).map(&:sum) }.first
+  ```
+- 119 最长连续序列
+  ```python
+  nums = set(nums); return max((len(list(takewhile(lambda x: x in nums, count(i)))) for i in nums if i - 1 not in nums), default=0)
+  ```
 
 ## 极致的优雅
 - 065 最短的单词编码 ← 官方题解
