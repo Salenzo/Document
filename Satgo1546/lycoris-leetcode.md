@@ -221,7 +221,7 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
   ```
 - 092 翻转字符
   ```c
-  for(int a = 0, b = 0; ; ) if (*s - 48 ? a = fmin(a, b), b++: a++, !*s++) return a;
+  for (int a = 0, b = 0; ; ) if (*s - 48 ? a = fmin(a, b), b++: a++, !*s++) return a;
   ```
 - 
 
