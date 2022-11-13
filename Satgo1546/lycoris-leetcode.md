@@ -235,6 +235,14 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
   ```python
   nums = set(nums); return max((len(list(takewhile(lambda x: x in nums, count(i)))) for i in nums if i - 1 not in nums), default=0)
   ```
+- 2425 所有数对的异或和
+  ```ruby
+  (nums2.size.odd? ? nums1.reduce(:^) : 0) ^ (nums1.size.odd? ? nums2.reduce(:^) : 0)
+  ```
+- 2429 最小XOR
+  ```ruby
+  ("%032b" % num1).tap { |s| num2.to_s(2).count("1").times { s[s.rindex("0")] = "x" if !s.sub!("1", "x") } }.tr("1x", "01").to_i(2)
+  ```
 
 ## 极致的优雅
 - 065 最短的单词编码 ← 官方题解
