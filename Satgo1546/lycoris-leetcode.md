@@ -235,6 +235,30 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
   ```python
   nums = set(nums); return max((len(list(takewhile(lambda x: x in nums, count(i)))) for i in nums if i - 1 not in nums), default=0)
   ```
+- 65 有效数字
+  ```ruby
+  /\A[+-]?(\d+|\d+\.\d*|\.\d+)([eE][+-]?\d+)?\z/ === s
+  ```
+- 66 加一
+  ```ruby
+  (digits.to_s.gsub(/\D/, "").to_i + 1).to_s.each_char.map(&:to_i)
+  ```
+- 67 二进制求和
+  ```java
+  return new BigInteger(a, 2).add(new BigInteger(b, 2)).toString(2);
+  ```
+- 69 x的平方根
+  ```python
+  return int(sqrt(x))
+  ```
+- 70 爬楼梯
+  ```ruby
+  (1..n).inject([0, 1]) { |(a, b)| [b, a + b] }[1]
+  ```
+- 74 搜索二维矩阵
+  ```ruby
+  matrix.bsearch { |x| x[-1] >= target }&.bsearch { |x| x >= target } == target
+  ```
 - 2425 所有数对的异或和
   ```ruby
   (nums2.size.odd? ? nums1.reduce(:^) : 0) ^ (nums1.size.odd? ? nums2.reduce(:^) : 0)
