@@ -259,6 +259,42 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
   ```ruby
   matrix.bsearch { |x| x[-1] >= target }&.bsearch { |x| x >= target } == target
   ```
+- 283 移动零
+  ```python
+  nums.sort(key=lambda x: x == 0)
+  ```
+- 342 4的幂
+  ```c
+  return n > 0 && !(n & (n - 1)) && !(__builtin_popcount(n - 1) & 1);
+  ```
+- 344 反转字符串
+  ```ruby
+  s.reverse!
+  ```
+- 349 两个数组的交集
+  ```python
+  return list(set(nums1) & set(nums2))
+  ```
+- 350 两个数组的交集II
+  ```python
+  return [a for a, n in (Counter(nums1) & Counter(nums2)).items() for _ in range(n)]
+  ```
+- 389 找不同
+  ```python
+  return next(iter(Counter(t) - Counter(s)))
+  ```
+- 394 字符串解码
+  ```ruby
+  nil while s.gsub!(/(\d+)\[([^\d\[\]]*)\]/) { $2 * $1.to_i }; s
+  ```
+- 535 TinyURL的加密与解密
+  ```javascript
+  encode = decode = x => x
+  ```
+- 537 复数乘法
+  ```ruby
+  (num1.sub("+-", "-").to_c * num2.sub("+-", "-").to_c).to_s.sub(/(?<=.)-/, "+-")
+  ```
 - 2425 所有数对的异或和
   ```ruby
   (nums2.size.odd? ? nums1.reduce(:^) : 0) ^ (nums1.size.odd? ? nums2.reduce(:^) : 0)
