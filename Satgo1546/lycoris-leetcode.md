@@ -160,6 +160,15 @@ class Solution:
 - 执行用时：7228 ms，在所有Python 3提交中击败了5.07%的用户。
 - 内存消耗：41.7 MB，在所有Python 3提交中击败了5.07%的用户。
 
+### 169 多数元素
+
+寻找第⌊n/2⌋大元素，选择选择算法。
+
+- 时间复杂度：O(n)，选择算法的时间代价的期望为线性。
+- 空间复杂度：O(log n)，递归使用栈空间的空间代价的期望为O(log n)。
+
+一句话解释清楚Boyer–Moore多数投票算法：遍历数组的时候，让不相同的数字两两抵消，那么最后剩下的肯定就是众数了。
+
 ## 一行代码赖皮过法
 
 - 001 整数除法
@@ -285,6 +294,10 @@ class Solution:
   ```ruby
   matrix.bsearch { |x| x[-1] >= target }&.bsearch { |x| x >= target } == target
   ```
+- 169 多数元素
+  ```ruby
+  nums.tally.max_by(&:last).first
+  ```
 - 283 移动零
   ```python
   nums.sort(key=lambda x: x == 0)
@@ -320,6 +333,22 @@ class Solution:
 - 537 复数乘法
   ```ruby
   (num1.sub("+-", "-").to_c * num2.sub("+-", "-").to_c).to_s.sub(/(?<=.)-/, "+-")
+  ```
+- 819 最常见的单词
+  ```ruby
+  paragraph.downcase.split(/\W+/).difference(banned).tally.max_by(&:last).first
+  ```
+- 824 山羊拉丁文
+  ```ruby
+  sentence.split(" ").each_with_index.map { |x, i| ("aeiouAEIOU".include?(x[0]) ? x : x[1..-1] + x[0]) + "m" + "a" * (i + 2) }.join(" ")
+  ```
+- 831 隐藏个人信息
+  ```ruby
+  s.include?("@") ? s.sub(/(\w)\w*(\w)/, "\\1*****\\2").downcase : s.tr("-+() ", "").sub(/\A(\d*)\d{6}(\d{4})\z/) { ($1.empty? ? "" : "+#{"*" * $1.length}-") + "***-***-#{$2}" }
+  ```
+- 832 翻转图像
+  ```python
+  return [[1 - x for x in reversed(a)] for a in image]
   ```
 - 2425 所有数对的异或和
   ```ruby
