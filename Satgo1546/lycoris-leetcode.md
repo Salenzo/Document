@@ -134,6 +134,32 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
 - 时间复杂度：O(n × sum)，其中n是数组`nums`的长度，sum是数组`nums`的元素和。字典中最多存在sum × 2 + 1个键，需要计算每个键的值。
 - 空间复杂度：O(sum)，其中sum是数组`nums`的元素和。空间复杂度取决于字典中键值对的数目。
 
+### 112 最长递增路径
+迫真记忆化广度优先搜索，非常慢，强烈不推荐。
+
+```python
+class Solution:
+    def longestIncreasingPath(self, matrix: List[List[int]]) -> int:
+        q = deque((i, j) for i in range(len(matrix)) for j in range(len(matrix[0])))
+        ans = [[1] * len(matrix[0]) for _ in range(len(matrix))]
+        while q:
+            i, j = q.popleft()
+            flag = False
+            for i1, j1 in ((i+1, j), (i, j+1), (i-1, j), (i, j-1)):
+                if 0 <= i1 < len(matrix) and 0 <= j1 < len(matrix[0]):
+                    if matrix[i1][j1] < matrix[i][j] and ans[i1][j1] + 1 > ans[i][j]:
+                        ans[i][j] = ans[i1][j1] + 1
+                        flag = True
+            if flag:
+                for i1, j1 in ((i+1, j), (i, j+1), (i-1, j), (i, j-1)):
+                    if 0 <= i1 < len(matrix) and 0 <= j1 < len(matrix[0]):
+                        q.append((i1, j1))
+        return max(max(row) for row in ans)
+```
+
+- 执行用时：7228 ms，在所有Python 3提交中击败了5.07%的用户。
+- 内存消耗：41.7 MB，在所有Python 3提交中击败了5.07%的用户。
+
 ## 一行代码赖皮过法
 
 - 001 整数除法
