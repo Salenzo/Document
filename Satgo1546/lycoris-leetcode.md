@@ -282,6 +282,10 @@ def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
   ```python
   nums = set(nums); return max((len(list(takewhile(lambda x: x in nums, count(i)))) for i in nums if i - 1 not in nums), default=0)
   ```
+- 48 旋转图像
+  ```ruby
+  matrix.transpose.map(&:reverse).each_with_index { |l, i| l.each_with_index { |x, j| matrix[i][j] = x } }
+  ```
 - 65 有效数字
   ```ruby
   /\A[+-]?(\d+|\d+\.\d*|\.\d+)([eE][+-]?\d+)?\z/ === s
