@@ -161,13 +161,25 @@ class Solution:
 - 内存消耗：41.7 MB，在所有Python 3提交中击败了5.07%的用户。
 
 ### 169 多数元素
-
-寻找第⌊n/2⌋大元素，选择选择算法。
+基于快速排序的选择算法：寻找第⌊n/2⌋大元素，选择选择算法。
 
 - 时间复杂度：O(n)，选择算法的时间代价的期望为线性。
 - 空间复杂度：O(log n)，递归使用栈空间的空间代价的期望为O(log n)。
 
 一句话解释清楚Boyer–Moore多数投票算法：遍历数组的时候，让不相同的数字两两抵消，那么最后剩下的肯定就是众数了。
+
+### 878 第N个神奇数字
+数学：[1, n]内有⌊n/a⌋ + ⌊n/b⌋ − ⌊n/lcm(a, b)⌋个a或b的倍数。若将a和b的公倍数当作两个数，则可以通过公式直接计算出第n个a或b的倍数。
+
+```python
+def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
+    d = gcd(a, b)
+    n += n // (a // d + b // d - 1)
+    return (min(a * ceil(n * b / (a + b)), b * ceil(n * a / (a + b)))) % 1000000007
+```
+
+- 时间复杂度：O(1)，中间结果可能超过32位整数，但不会超过64位整数。
+- 空间复杂度：O(1)，仅使用常量空间开销。
 
 ## 一行代码赖皮过法
 
@@ -349,6 +361,10 @@ class Solution:
 - 832 翻转图像
   ```python
   return [[1 - x for x in reversed(a)] for a in image]
+  ```
+- 1742 盒子中小球的最大数量
+  ```ruby
+  (low_limit..high_limit).each_with_object([0] * 46) { |x, m| m[x.to_s.each_byte.inject(0) { |s, c| s + c - 48 }] += 1 }.max
   ```
 - 2425 所有数对的异或和
   ```ruby
