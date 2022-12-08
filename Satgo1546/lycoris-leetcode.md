@@ -183,6 +183,42 @@ def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
 
 ## 一行代码赖皮过法
 
+- 05 替换空格
+  ```php
+  return str_replace(" ", "%20", $s);
+  ```
+- 11 旋转数组的最小数字
+  ```ruby
+  numbers.min
+  ```
+- 15 二进制中1的个数
+  ```python
+  return n.bit_count()
+  ```
+- 16 数值的整数次方
+  ```scheme
+  (define my-pow expt)
+  ```
+- 17 打印从1到最大的n位数
+  ```rust
+  (1..10i32.pow(n as u32)).collect()
+  ```
+- 19 正则表达式匹配
+  ```ruby
+  /\A#{p}\z/ === s
+  ```
+- 53-II 0~n-1中缺失的数字
+  ```ruby
+  ((0..nums.length).to_a - nums)[0]
+  ```
+- 55-I 二叉树的深度
+  ```ruby
+  root ? [max_depth(root.left), max_depth(root.right)].max + 1 : 0
+  ```
+- 64 求1+2+…+n
+  ```ruby
+  (1..n).sum
+  ```
 - 001 整数除法
   ```python
   return min(int(__import__('operator').itruediv(a, b)), 2 ** 31 - 1)
