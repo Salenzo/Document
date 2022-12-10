@@ -187,9 +187,24 @@ def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
   ```php
   return str_replace(" ", "%20", $s);
   ```
+- 09 用两个栈实现队列
+  ```ruby
+  class CQueue < Array
+    alias append_tail push
+    def delete_head = shift || -1
+  end
+  ```
 - 11 旋转数组的最小数字
   ```ruby
   numbers.min
+  ```
+- 14-I 剪绳子
+  ```ruby
+  (2..n).map { |m| (n/m)**(m-n%m) * (n/m+1)**(n%m) }.max
+  ```
+- 14-II 剪绳子
+  ```ruby
+  (2..n).map { |m| (n/m)**(m-n%m) * (n/m+1)**(n%m) }.max % 1000000007
   ```
 - 15 二进制中1的个数
   ```python
