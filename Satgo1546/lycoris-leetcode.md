@@ -183,6 +183,10 @@ def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
 
 ## 一行代码赖皮过法
 
+- 04 二维数组中的查找
+  ```ruby
+  matrix.flatten.include?(target)
+  ```
 - 05 替换空格
   ```php
   return str_replace(" ", "%20", $s);
@@ -221,6 +225,18 @@ def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
 - 19 正则表达式匹配
   ```ruby
   /\A#{p}\z/ === s
+  ```
+- 20 表示数值的字符串
+  ```ruby
+  /\A *[+-]?(\d*\.?\d+|\d+\.)(e[+-]?\d+)? *\z/i === s
+  ```
+- 21 调整数组顺序使奇数位于偶数前面
+  ```
+  nums.sort_by { ~_1 & 1 }
+  ```
+- 35 复杂链表的复制
+  ```python
+  return deepcopy(head)
   ```
 - 53-II 0~n-1中缺失的数字
   ```ruby
@@ -443,6 +459,16 @@ def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
       nodes = [reduce(dict.__getitem__, word[::-1], trie) for word in words]
       # 没有相邻项的节点即是答案
       return sum(len(word) + 1 for i, word in enumerate(words) if len(nodes[i]) == 0)
+  ```
+
+## 极致的丑陋
+- 32-II 从上到下打印二叉树II
+  ```python
+  def levelOrder(self, root: TreeNode) -> List[List[int]]:
+      if not root: return []
+      ans = [[root]]
+      while ans[-1]: ans.append([node for row in [[node.left, node.right] for node in ans[-1]] for node in row if node])
+      return [[node.val for node in row] for row in ans][:-1]
   ```
 
 ## 很难绷得住
