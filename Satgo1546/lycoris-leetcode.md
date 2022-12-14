@@ -238,6 +238,14 @@ def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
   ```python
   return deepcopy(head)
   ```
+- 40 最小的k个数
+  ```python
+  return sorted(arr)[:k]
+  ```
+- 43 1~n整数中1出现的次数
+  ```python
+  return sum((n+1) // 10**(i+1) * 10**i + min(max((n+1) % 10**(i+1) - 10**i, 0), 10**i) for i in range(10))
+  ```
 - 53-II 0~n-1中缺失的数字
   ```ruby
   ((0..nums.length).to_a - nums)[0]
@@ -249,6 +257,10 @@ def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
 - 64 求1+2+…+n
   ```ruby
   (1..n).sum
+  ```
+- 65 不用加减乘除做加法
+  ```python
+  return add(a, b)
   ```
 - 001 整数除法
   ```python
