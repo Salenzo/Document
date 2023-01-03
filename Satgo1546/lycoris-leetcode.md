@@ -246,6 +246,10 @@ def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
   ```python
   return sum((n+1) // 10**(i+1) * 10**i + min(max((n+1) % 10**(i+1) - 10**i, 0), 10**i) for i in range(10))
   ```
+- 49 丑数
+  ```python
+  return sorted(2 ** i * 3 ** j * 5 ** k for i in range(32) for j in range(21) for k in range(14))[n - 1]
+  ```
 - 53-II 0~n-1中缺失的数字
   ```ruby
   ((0..nums.length).to_a - nums)[0]
