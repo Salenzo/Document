@@ -457,6 +457,10 @@ def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
   ```ruby
   (low_limit..high_limit).each_with_object([0] * 46) { |x, m| m[x.to_s.each_byte.inject(0) { |s, c| s + c - 48 }] += 1 }.max
   ```
+- 2299 强密码检验器II
+  ```ruby
+  password !~ /(.)\1|^(.{,7}|[^a-z]+|[^A-Z]+|\D+|[^!@#$%^&*()+-]+)$/
+  ```
 - 2425 所有数对的异或和
   ```ruby
   (nums2.size.odd? ? nums1.reduce(:^) : 0) ^ (nums1.size.odd? ? nums2.reduce(:^) : 0)
