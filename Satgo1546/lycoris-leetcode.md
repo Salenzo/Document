@@ -484,6 +484,13 @@ def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
       # 没有相邻项的节点即是答案
       return sum(len(word) + 1 for i, word in enumerate(words) if len(nodes[i]) == 0)
   ```
+- 2791 树中可以形成回文的路径数
+  ```python
+  def countPalindromePaths(self, parent: List[int], s: str) -> int:
+      f = cache(lambda i: i and f(parent[i]) ^ 1 << ord(s[i]) - 97)
+      m = Counter(map(f, range(len(parent))))
+      return sum(m[k] * (m[k] - 1 + sum(m[k ^ 1 << j] for j in range(26))) for k in m) // 2
+  ```
 
 ## 极致的丑陋
 - 32-II 从上到下打印二叉树II
